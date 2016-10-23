@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SwitcherView">
+        <attr name="switcherTextColor" format="reference|color"/>
+        <attr name="switcherTextSize" format="dimension"/>
+        <attr name="switcherRollingTime" format="integer"/>
+    </declare-styleable>
+
+</resources>
