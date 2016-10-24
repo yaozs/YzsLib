@@ -29,7 +29,7 @@ import java.util.TimerTask;
  * Description: 垂直滚动的广告栏
  * Date: 2016/10/20
  */
-public class SwitcherView extends TextSwitcher implements ViewSwitcher.ViewFactory, View.OnTouchListener {
+public class NoticeView extends TextSwitcher implements ViewSwitcher.ViewFactory, View.OnTouchListener {
 
     private static final String TAG = "SwitcherView";
 
@@ -74,21 +74,21 @@ public class SwitcherView extends TextSwitcher implements ViewSwitcher.ViewFacto
      */
     private int time;
 
-    public SwitcherView(Context context) {
+    public NoticeView(Context context) {
         this(context, null);
     }
 
-    public SwitcherView(Context context, AttributeSet attrs) {
+    public NoticeView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
     private void init(Context context, AttributeSet attrs) {
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SwitcherView);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.NoticeView);
         //获取xml文件中属性，如果没有用默认属性
-        textColor = ta.getColor(R.styleable.SwitcherView_switcherTextColor, textColor);
-        timePeriod = ta.getInt(R.styleable.SwitcherView_switcherRollingTime, timePeriod);
-        textSize = ta.getDimensionPixelSize(R.styleable.SwitcherView_switcherTextSize, sp2px(defaultTextSize));
+        textColor = ta.getColor(R.styleable.NoticeView_noticeTextColor, textColor);
+        timePeriod = ta.getInt(R.styleable.NoticeView_noticeRollingTime, timePeriod);
+        textSize = ta.getDimensionPixelSize(R.styleable.NoticeView_noticeTextSize, sp2px(defaultTextSize));
         Log.i("----", textSize + "");
         textSize = px2sp(textSize);
         Log.i("----", textSize + "");
