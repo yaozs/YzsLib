@@ -10,12 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.yzs.yzslibrarydemo.MainActivity">
 
-    <com.yzs.yzslibrary.view.SwitcherView
+    <com.yzs.yzslibrary.view.NoticeView
         android:id="@+id/switcherView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="#ff99ff"
-        app:switcherRollingTime="4000"
-        app:switcherTextColor="@color/colorPrimaryDark"
-        app:switcherTextSize="16sp" />
+        app:noticeRollingTime="4000"
+        app:noticeTextColor="@color/colorPrimaryDark"
+        app:noticeTextSize="16sp" />
 </RelativeLayout>

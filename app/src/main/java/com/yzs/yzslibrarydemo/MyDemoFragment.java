@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.yzs.yzslibrary.view.SwitcherView;
+import com.yzs.yzslibrary.view.NoticeView;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,6 +18,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+
 
 /**
  * Author: 姚智胜
@@ -27,7 +28,7 @@ import java.util.ArrayList;
  */
 public class MyDemoFragment extends Fragment {
     private static final String TAG = "MyDemoFragment";
-    private SwitcherView switcherView;
+    private NoticeView switcherView;
     private View view;
 
     @Nullable
@@ -42,7 +43,7 @@ public class MyDemoFragment extends Fragment {
 
 
     private void init() {
-        switcherView = (SwitcherView) view.findViewById(R.id.switcherView);
+        switcherView = (NoticeView) view.findViewById(R.id.switcherView);
         final ArrayList<String> strs = new ArrayList<>();
         strs.add("哎呦，不错哦");
         strs.add("你知道我是谁吗你知道我是谁吗你知道我是谁吗");
@@ -50,7 +51,7 @@ public class MyDemoFragment extends Fragment {
         strs.add("1111111111111");
         switcherView.setResource(strs);
 
-        switcherView.setOnItemClick(new SwitcherView.OnItemClick() {
+        switcherView.setOnItemClick(new NoticeView.OnItemClick() {
             @Override
             public void Click(int index) {
                 Toast.makeText(getActivity(), strs.get(index),
@@ -62,12 +63,12 @@ public class MyDemoFragment extends Fragment {
         if (Patterns.WEB_URL.matcher("booooo000aidu.com").matches()) {
             Toast.makeText(getActivity(), "符合标准",
                     Toast.LENGTH_SHORT).show();
-            Log.e("符合标准","符合标准");
+            Log.e("符合标准", "符合标准");
             //符合标准
-        } else{
+        } else {
             Toast.makeText(getActivity(), "不符合标准",
                     Toast.LENGTH_SHORT).show();
-            Log.e("不符合标准","不符合标准");
+            Log.e("不符合标准", "不符合标准");
             //不符合标准
         }
 //        try {
