@@ -8,9 +8,12 @@ import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.yzs.yzslibrary.view.NoticeView;
+import com.yzs.yzslibrary.view.nicespinner.NiceSpinner;
+import com.yzs.yzslibrary.view.togglebutton.ToggleButton;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,6 +21,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 
 /**
@@ -30,6 +36,9 @@ public class MyDemoFragment extends Fragment {
     private static final String TAG = "MyDemoFragment";
     private NoticeView switcherView;
     private View view;
+
+    private ToggleButton toggleButton;
+    private NiceSpinner niceSpinner;
 
     @Nullable
     @Override
@@ -58,36 +67,51 @@ public class MyDemoFragment extends Fragment {
                         Toast.LENGTH_SHORT).show();
             }
         });
-        aaa();
-        switcherView.start(2000);
-        if (Patterns.WEB_URL.matcher("booooo000aidu.com").matches()) {
-            Toast.makeText(getActivity(), "符合标准",
-                    Toast.LENGTH_SHORT).show();
-            Log.e("符合标准", "符合标准");
-            //符合标准
-        } else {
-            Toast.makeText(getActivity(), "不符合标准",
-                    Toast.LENGTH_SHORT).show();
-            Log.e("不符合标准", "不符合标准");
-            //不符合标准
-        }
-//        try {
-//            WebAddress webAddress = new WebAddress("wwwwwwwww");
-//        } catch (WebAddress.ParseException ex) {
-//          Toast.makeText(getActivity(), (CharSequence) ex,Toast.LENGTH_SHORT).show();
-//        }
-    }
 
-    public void aaa() {
-        URL url;
-        try {
-            url = new URL("http://www.baidu.com");
-            InputStream in = url.openStream();
-            System.out.println("连接可用");
-        } catch (Exception e1) {
-            System.out.println("连接打不开!");
-            url = null;
-        }
+        switcherView.start(2000);
+
+        toggleButton = (ToggleButton) view.findViewById(R.id.togglebutton);
+//        //切换开关
+//        toggleBtn.toggle();
+//        //切换无动画
+//        toggleBtn.toggle(false);
+//        //开关切换事件
+//        toggleBtn.setOnToggleChanged(new OnToggleChanged(){
+//            @Override
+//            public void onToggle(boolean on) {
+//            }
+//        });
+//
+//        toggleBtn.setToggleOn();
+//        toggleBtn.setToggleOff();
+//        //无动画切换
+//        toggleBtn.setToggleOn(false);
+//        toggleBtn.setToggleOff(false);
+//
+//        //禁用动画
+//        toggleBtn.setAnimate(false);
+        toggleButton.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
+            @Override
+            public void onToggle(boolean on) {
+                if (on) {
+                    Toast.makeText(getActivity(), "on", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getActivity(), "off", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
+        final List<String> dataset = new LinkedList<>(Arrays.asList("最新发布", "最多点赞"));
+        niceSpinner.attachDataSource(dataset);
+        niceSpinner.addOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(getActivity(), dataset.get(i), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 
 
@@ -110,63 +134,5 @@ public class MyDemoFragment extends Fragment {
         super.onDestroy();
     }
 
-    private static URL url;
-    private static HttpURLConnection con;
-    private static int state = -1;
-
-    /**
-     * 功能：检测当前URL是否可连接或是否有效,
-     * 描述：最多连接网络 5 次, 如果 5 次都不成功，视为该地址不可用
-     *
-     * @param urlStr 指定URL网络地址
-     * @return URL
-     */
-    public synchronized URL isConnect(String urlStr) {
-        int counts = 0;
-        if (urlStr == null || urlStr.length() <= 0) {
-            return null;
-        }
-        while (counts < 5) {
-            try {
-                url = new URL(urlStr);
-                con = (HttpURLConnection) url.openConnection();
-                state = con.getResponseCode();
-                System.out.println(counts + "= " + state);
-                if (state == 200) {
-                    System.out.println("URL可用！");
-                }
-                break;
-            } catch (Exception ex) {
-                counts++;
-                System.out.println("URL不可用，连接第 " + counts + " 次");
-                urlStr = null;
-                continue;
-            }
-        }
-
-        return url;
-    }
-
-
-    public static boolean checkURL(String url) {
-        boolean value = false;
-        try {
-            HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
-            int code = conn.getResponseCode();
-            System.out.println(">>>>>>>>>>>>>>>> " + code + " <<<<<<<<<<<<<<<<<<");
-            if (code != 200) {
-                value = false;
-            } else {
-                value = true;
-            }
-        } catch (MalformedURLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return value;
-    }
 
 }
