@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
+import com.yzs.yzslibrary.base.YzsBaseFragment;
 import com.yzs.yzslibrary.view.NoticeView;
 import com.yzs.yzslibrary.view.nicespinner.NiceSpinner;
 import com.yzs.yzslibrary.view.togglebutton.ToggleButton;
@@ -32,7 +33,7 @@ import java.util.List;
  * Description:
  * Date: 2016/10/21
  */
-public class MyDemoFragment extends Fragment {
+public class MyDemoFragment extends YzsBaseFragment {
     private static final String TAG = "MyDemoFragment";
     private NoticeView switcherView;
     private View view;
@@ -40,19 +41,25 @@ public class MyDemoFragment extends Fragment {
     private ToggleButton toggleButton;
     private NiceSpinner niceSpinner;
 
-    @Nullable
+
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (view == null) {
             view = inflater.inflate(R.layout.activity_main, container, false);
-            init();
+
         }
         return view;
     }
 
-
-    private void init() {
+    @Override
+    protected void initView() {
         switcherView = (NoticeView) view.findViewById(R.id.switcherView);
+        toggleButton = (ToggleButton) view.findViewById(R.id.togglebutton);
+        niceSpinner = (NiceSpinner) view.findViewById(R.id.nice_spinner);
+    }
+
+    @Override
+    protected void initLogic() {
         final ArrayList<String> strs = new ArrayList<>();
         strs.add("哎呦，不错哦");
         strs.add("你知道我是谁吗你知道我是谁吗你知道我是谁吗");
@@ -70,7 +77,6 @@ public class MyDemoFragment extends Fragment {
 
         switcherView.start(2000);
 
-        toggleButton = (ToggleButton) view.findViewById(R.id.togglebutton);
 //        //切换开关
 //        toggleBtn.toggle();
 //        //切换无动画
@@ -103,6 +109,7 @@ public class MyDemoFragment extends Fragment {
 
 
         final List<String> dataset = new LinkedList<>(Arrays.asList("最新发布", "最多点赞"));
+
         niceSpinner.attachDataSource(dataset);
         niceSpinner.addOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -110,8 +117,6 @@ public class MyDemoFragment extends Fragment {
                 Toast.makeText(getActivity(), dataset.get(i), Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 
 
