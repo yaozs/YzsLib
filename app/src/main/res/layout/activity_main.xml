@@ -31,4 +31,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         app:textTint="@color/colorPrimary" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.yzs.yzslibrary.view.AdaptiveWebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.yzs.yzslibrary.view.AdaptiveWebView>
+    </ScrollView>
 </LinearLayout>

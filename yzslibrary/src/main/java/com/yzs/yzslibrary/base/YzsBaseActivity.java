@@ -1,8 +1,17 @@
 package com.yzs.yzslibrary.base;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.Window;
+import android.view.WindowManager;
+
+import com.yzs.yzslibrary.R;
+import com.yzs.yzslibrary.util.SystemBarTintManager;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * Author: 姚智胜

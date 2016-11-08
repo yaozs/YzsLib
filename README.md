@@ -27,3 +27,4 @@
                   更新控件AutoSwipeRefreshLayout    自动刷新SwipeRefreshLayout    
                   更新控件MultiImageView  显示1 ~ N 张图片的View仿微信朋友圈     
                   更新控件ColorFilterImageView  实现图像根据按下抬起动作变化颜色
+        *16.11.8更新控件AdaptiveWebView，实现控件支持高度自适应，动态测量出网页的高度
