@@ -21,7 +21,7 @@
         app:noticeTextSize="16sp" />
 
     <com.yzs.yzslibrary.view.togglebutton.ToggleButton
-        android:id="@+id/togglebutton"
+        android:id="@+id/toggleButton"
         android:layout_width="54dp"
         android:layout_height="30dp" />
 

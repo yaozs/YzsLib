@@ -3,8 +3,6 @@ package com.yzs.yzslibrarydemo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,11 +14,6 @@ import com.yzs.yzslibrary.view.NoticeView;
 import com.yzs.yzslibrary.view.nicespinner.NiceSpinner;
 import com.yzs.yzslibrary.view.togglebutton.ToggleButton;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -77,6 +70,7 @@ public class MyDemoFragment extends YzsBaseFragment {
 
         switcherView.start(2000);
 
+        toggleButton = (ToggleButton) view.findViewById(R.id.toggleButton);
 //        //切换开关
 //        toggleBtn.toggle();
 //        //切换无动画
@@ -138,6 +132,5 @@ public class MyDemoFragment extends YzsBaseFragment {
         switcherView.onDestroy();
         super.onDestroy();
     }
-
 
 }

@@ -1,15 +1,8 @@
 package com.yzs.yzslibrary.base;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.Window;
-import android.view.WindowManager;
-
-import com.yzs.yzslibrary.R;
-import com.yzs.yzslibrary.util.SystemBarTintManager;
 
 /**
  * Author: 姚智胜
@@ -34,6 +27,7 @@ public abstract class YzsBaseActivity extends Activity {
             tintManager.setStatusBarTintEnabled(true);
             tintManager.setStatusBarTintResource(R.color.colorPrimaryDark);//通知栏所需颜色
         }
+        EventBus.getDefault().register(this);
         initContentView(savedInstanceState);
         initView();
         initLogic();
@@ -59,4 +53,9 @@ public abstract class YzsBaseActivity extends Activity {
     }
 
 
+    @Override
+    protected void onDestroy() {
+        EventBus.getDefault().unregister(this);
+        super.onDestroy();
+    }
 }
