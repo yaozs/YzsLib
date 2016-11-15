@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">YzsLibrary</string>
+
+    <!--购物车加减控件string-->
+    <string name="qv_add">+</string>
+    <string name="qv_remove">-</string>
+    <string name="qv_unit"> </string>
+
 </resources>

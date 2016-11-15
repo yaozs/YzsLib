@@ -1,0 +1,29 @@
+<resources>
+    <!--购物车加减控件-->
+    <declare-styleable name="QuantityView">
+        <!--加号按钮属性-->
+        <attr name="qv_addButtonText" format="string" />
+        <attr name="qv_addButtonBackground" format="color|reference" />
+        <attr name="qv_addButtonTextColor" format="color" />
+        <!--减号号按钮属性-->
+        <attr name="qv_removeButtonText" format="string" />
+        <attr name="qv_removeButtonBackground" format="color|reference" />
+        <attr name="qv_removeButtonTextColor" format="color" />
+        <!--单位-->
+        <attr name="qv_unit" format="string" />
+        <!--默认值-->
+        <attr name="qv_quantity" format="float" />
+        <!--步长-->
+        <attr name="qv_quantityStep" format="float" />
+        <!--保留小数位数-->
+        <attr name="qv_reservePlaces" format="integer" />
+        <attr name="qv_quantityBackground" format="color|reference" />
+        <attr name="qv_quantityTextColor" format="color" />
+        <attr name="qv_quantityPadding" format="dimension" />
+        <!--最大最小值-->
+        <attr name="qv_maxQuantity" format="integer" />
+        <attr name="qv_minQuantity" format="integer" />
+        <!--是否有中间点击事件-->
+        <attr name="qv_click" format="boolean" />
+    </declare-styleable>
+</resources>

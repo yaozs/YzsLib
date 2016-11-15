@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -22,6 +24,7 @@
 
     <com.yzs.yzslibrary.view.togglebutton.ToggleButton
         android:id="@+id/toggleButton"
+
         android:layout_width="54dp"
         android:layout_height="30dp" />
 
@@ -29,14 +32,8 @@
         android:id="@+id/nice_spinner"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
+
         android:layout_alignParentRight="true"
         app:textTint="@color/colorPrimary" />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.yzs.yzslibrary.view.AdaptiveWebView
-            android:id="@+id/webview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></com.yzs.yzslibrary.view.AdaptiveWebView>
-    </ScrollView>
+
 </LinearLayout>

@@ -49,8 +49,8 @@ public class MyDemoFragment extends YzsBaseFragment {
         switcherView = (NoticeView) view.findViewById(R.id.switcherView);
         toggleButton = (ToggleButton) view.findViewById(R.id.toggleButton);
         niceSpinner = (NiceSpinner) view.findViewById(R.id.nice_spinner);
-        webView = (AdaptiveWebView) view.findViewById(R.id.webview);
-        webView.loadUrl("https://www.baidu.com/s?wd=androidstudio%E6%80%8E%E6%A0%B7%E5%8D%B8%E8%BD%BD%E6%8F%92%E4%BB%B6&rsv_spt=1&rsv_iqid=0xa707c9730002e3f9&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&rqlang=cn&tn=baiduhome_pg&rsv_enter=1&rsv_t=664dTHWSNZIDf4YT0cKcd%2FIjC4lf0IhA9shx8MkFGzzXdukyFMa0zO2Hs8fd7wa98WGv&oq=eventbus%20%26lt%3B.0&inputT=10070&rsv_pq=fe27f6f500032081&rsv_sug3=12&rsv_sug1=6&rsv_sug7=100&rsv_sug2=0&rsv_sug4=10070");
+//        webView = (AdaptiveWebView) view.findViewById(R.id.webview);
+//        webView.loadUrl("http://www.zhihu.com/question/20718551");
     }
 
     @Override
