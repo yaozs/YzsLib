@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrary.util.LoadingDialog;
+import com.yzs.yzslibrary.util.ToastUtils;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -31,7 +32,7 @@ public abstract class YzsBaseFragment extends SupportFragment {
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        if (null!=getArguments()){
+        if (null != getArguments()) {
             getBundleExtras(getArguments());
         }
         View view = initContentView(inflater, container, savedInstanceState);
@@ -115,6 +116,23 @@ public abstract class YzsBaseFragment extends SupportFragment {
      */
     protected void cancelLoadingDialog() {
         LoadingDialog.cancelLoadingDialog();
+    }
+
+    //Toast显示
+    protected void showShortToast(String string) {
+        ToastUtils.showShortToast(getActivity(), string);
+    }
+
+    protected void showShortToast(int stringId) {
+        ToastUtils.showShortToast(getActivity(), stringId);
+    }
+
+    protected void showLongToast(String string) {
+        ToastUtils.showShortToast(getActivity(), string);
+    }
+
+    protected void showLongToast(int stringId) {
+        ToastUtils.showShortToast(getActivity(), stringId);
     }
 
     /**

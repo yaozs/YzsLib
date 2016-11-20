@@ -18,10 +18,10 @@
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
 
-    <style name="toolBarStyle" parent="@style/ThemeOverlay.AppCompat">
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:textSize">@dimen/sp_14</item>
-        <item name="android:adjustViewBounds">true</item>
-        <item name="actionMenuTextColor">@android:color/white</item>
-    </style>
+    <!--<style name="toolBarStyle" parent="@style/ThemeOverlay.AppCompat">-->
+        <!--<item name="android:gravity">center_vertical</item>-->
+        <!--<item name="android:textSize">@dimen/sp_14</item>-->
+        <!--<item name="android:adjustViewBounds">true</item>-->
+        <!--<item name="actionMenuTextColor">@android:color/white</item>-->
+    <!--</style>-->
 </resources>

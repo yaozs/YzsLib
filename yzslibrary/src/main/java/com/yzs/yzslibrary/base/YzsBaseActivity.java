@@ -10,12 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yzs.yzslibrary.R;
 import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrary.util.LoadingDialog;
 import com.yzs.yzslibrary.util.SystemBarTintManager;
+import com.yzs.yzslibrary.util.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -39,6 +42,13 @@ public abstract class YzsBaseActivity extends SupportActivity {
      */
     protected View emptyView;
 
+    public boolean useTitle = true;
+
+    public TextView title;
+    public ImageView back;
+    public TextView tv_menu;
+    public ImageView iv_menu;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,8 +65,12 @@ public abstract class YzsBaseActivity extends SupportActivity {
         }
         EventBus.getDefault().register(this);
         initContentView(savedInstanceState);
+        if (useTitle) {
+            initTitle();
+        }
         initView();
         initLogic();
+
     }
 
     protected abstract void initContentView(android.os.Bundle bundle);
@@ -73,6 +87,27 @@ public abstract class YzsBaseActivity extends SupportActivity {
      */
     protected abstract void getBundleExtras(Bundle extras);
 
+    protected void initTitle() {
+        title = (TextView) findViewById(R.id.toolbar_title);
+        back = (ImageView) findViewById(R.id.toolbar_back);
+        iv_menu = (ImageView) findViewById(R.id.toolbar_iv_menu);
+        tv_menu = (TextView) findViewById(R.id.toolbar_tv_menu);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    public void setTitle(String string) {
+        title.setText(string);
+    }
+
+    public void setTitle(int id) {
+        title.setText(id);
+    }
+
 
     @TargetApi(19)
     private void setTranslucentStatus(boolean on) {
@@ -87,12 +122,17 @@ public abstract class YzsBaseActivity extends SupportActivity {
         win.setAttributes(winParams);
     }
 
+    protected void chooseUseTitle(boolean choose) {
+        useTitle = choose;
+    }
+
     /**
      * EventBus接收消息
      *
      * @param center 消息接收
      */
     @Subscribe
+
     public void onEventMainThread(EventCenter center) {
 
         if (null != center) {
@@ -141,6 +181,23 @@ public abstract class YzsBaseActivity extends SupportActivity {
      */
     protected void cancelLoadingDialog() {
         LoadingDialog.cancelLoadingDialog();
+    }
+
+    //Toast显示
+    protected void showShortToast(String string) {
+        ToastUtils.showShortToast(this, string);
+    }
+
+    protected void showShortToast(int stringId) {
+        ToastUtils.showShortToast(this, stringId);
+    }
+
+    protected void showLongToast(String string) {
+        ToastUtils.showShortToast(this, string);
+    }
+
+    protected void showLongToast(int stringId) {
+        ToastUtils.showShortToast(this, stringId);
     }
 
 

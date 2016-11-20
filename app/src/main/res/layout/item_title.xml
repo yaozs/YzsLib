@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="45dp"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/common_toolbar"
+    <android.support.v7.widget.Toolbar
+        android:id="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimary"
         android:foregroundGravity="center_vertical"
-        android:padding="0dp"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/toolBarStyle">
+        android:padding="0dp">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -27,7 +24,7 @@
             <!--android:orientation="horizontal">-->
 
             <ImageView
-                android:id="@+id/toolbar_back"
+                android:id="@id/toolbar_back"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="left|center_vertical"
@@ -35,7 +32,7 @@
 
 
             <TextView
-                android:id="@+id/toolbar_title"
+                android:id="@id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -48,7 +45,7 @@
 
 
             <RelativeLayout
-                android:id="@+id/layoutMenu"
+                android:id="@id/toolbar_layout_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="right|center_vertical"
@@ -57,13 +54,13 @@
                 android:paddingRight="10dp">
 
                 <ImageView
-                    android:id="@+id/ivRight"
+                    android:id="@id/toolbar_iv_menu"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_centerVertical="true" />
 
                 <TextView
-                    android:id="@+id/tvRight"
+                    android:id="@id/toolbar_tv_menu"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_centerVertical="true"
