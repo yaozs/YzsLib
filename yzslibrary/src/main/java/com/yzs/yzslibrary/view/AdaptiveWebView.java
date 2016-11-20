@@ -20,10 +20,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * @author 姚智胜
- * @version V1.0
- * @Description: 解决加载Https以及根据网页动态设置WebView高度等难题
- * @date 2016/5/12 13:50
+ * author 姚智胜
+ * version V1.0
+ * Description: 解决加载Https以及根据网页动态设置WebView高度等难题
+ * date 2016/5/12 13:50
  */
 public class AdaptiveWebView extends WebView {
 

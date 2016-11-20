@@ -5,5 +5,7 @@
     <string name="qv_add">+</string>
     <string name="qv_remove">-</string>
     <string name="qv_unit"> </string>
+    <string name="not_get_data">没有数据奥！</string>
+    <string name="error_get_data">获取数据失败了！</string>
 
 </resources>

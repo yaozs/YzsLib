@@ -1,4 +1,4 @@
-package com.yzs.yzslibrarydemo;
+package com.yzs.yzslibrarydemo.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,10 +9,12 @@ import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.yzs.yzslibrary.base.YzsBaseFragment;
+import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrary.view.AdaptiveWebView;
 import com.yzs.yzslibrary.view.NoticeView;
 import com.yzs.yzslibrary.view.nicespinner.NiceSpinner;
 import com.yzs.yzslibrary.view.togglebutton.ToggleButton;
+import com.yzs.yzslibrarydemo.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,18 +31,16 @@ import java.util.List;
 public class MyDemoFragment extends YzsBaseFragment {
     private static final String TAG = "MyDemoFragment";
     private NoticeView switcherView;
-    private View view;
 
     private ToggleButton toggleButton;
     private NiceSpinner niceSpinner;
     private AdaptiveWebView webView;
 
+    private View view;
+
     @Override
     protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (view == null) {
-            view = inflater.inflate(R.layout.activity_main, container, false);
-
-        }
+        view = createFragmentView(inflater, container, R.layout.activity_main);
         return view;
     }
 
@@ -55,6 +55,7 @@ public class MyDemoFragment extends YzsBaseFragment {
 
     @Override
     protected void initLogic() {
+        showLoadingDialog();
         final ArrayList<String> strs = new ArrayList<>();
         strs.add("哎呦，不错哦");
         strs.add("你知道我是谁吗你知道我是谁吗你知道我是谁吗");
@@ -72,7 +73,6 @@ public class MyDemoFragment extends YzsBaseFragment {
 
         switcherView.start(2000);
 
-        toggleButton = (ToggleButton) view.findViewById(R.id.toggleButton);
 //        //切换开关
 //        toggleBtn.toggle();
 //        //切换无动画
@@ -113,6 +113,16 @@ public class MyDemoFragment extends YzsBaseFragment {
                 Toast.makeText(getActivity(), dataset.get(i), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    protected void getBundleExtras(Bundle bundle) {
+
+    }
+
+    @Override
+    protected void onEventComing(EventCenter center) {
+
     }
 
 

@@ -1,11 +1,14 @@
-package com.yzs.yzslibrarydemo;
+package com.yzs.yzslibrarydemo.activity;
 
 import android.os.Bundle;
 import android.util.Log;
 
-import com.yzs.yzslibrary.base.YzsBaseFragmentActivity;
+import com.yzs.yzslibrary.base.YzsBaseActivity;
+import com.yzs.yzslibrary.entity.EventCenter;
+import com.yzs.yzslibrarydemo.R;
+import com.yzs.yzslibrarydemo.fragment.MyDemoFragment;
 
-public class MainActivity extends YzsBaseFragmentActivity {
+public class MainActivity extends YzsBaseActivity {
 
     MyDemoFragment fragment;
 
@@ -21,7 +24,6 @@ public class MainActivity extends YzsBaseFragmentActivity {
     }
 
 
-
     @Override
     protected void initView() {
 
@@ -33,15 +35,25 @@ public class MainActivity extends YzsBaseFragmentActivity {
     }
 
     @Override
+    protected void getBundleExtras(Bundle extras) {
+
+    }
+
+    @Override
+    protected void onEventComing(EventCenter center) {
+
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
-        Log.e("MainActivity","onResume");
+        Log.e("MainActivity", "onResume");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e("MainActivity","onDestroy");
+        Log.e("MainActivity", "onDestroy");
     }
 
 
