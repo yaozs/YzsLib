@@ -30,7 +30,8 @@
         * 16.11.8  更新控件AdaptiveWebView，实现控件支持高度自适应，动态测量出网页的高度
         * 16.11.15 更新控件QuantityView（购物车加减控件），更新工具类ArithmeticUtils精度运算工具类
                    更新style——activity，配合YzsBase使用实现沉浸式
-        * 16.11.20 更新工具类，更新fragment替代库，增加glide加载辅助库，删除YzsbaseFragmentActivity，
+        * 16.11.20 更新工具类，更新fragment替代库，增加glide加载辅助库，删除YzsBaseFragmentActivity，
                    添加6.0权限申请工具，添加界面loading效果到baseFragment与activity中，
                    添加recyclerview仿listview与gridview分割线，更新log工具，
                    封装eventbus到activity与fragment中
+        * 16.11.21 增加YzsBaseWebActivity,整理demo
