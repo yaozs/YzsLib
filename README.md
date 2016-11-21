@@ -34,4 +34,4 @@
                    添加6.0权限申请工具，添加界面loading效果到baseFragment与activity中，
                    添加recyclerview仿listview与gridview分割线，更新log工具，
                    封装eventbus到activity与fragment中
-        * 16.11.21 增加YzsBaseWebActivity,整理demo
+        * 16.11.21 增加YzsBaseWebActivity,更新整合Demo展示，增加StateButton——不用写selector的button
