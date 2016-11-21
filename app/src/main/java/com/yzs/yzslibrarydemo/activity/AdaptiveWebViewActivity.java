@@ -29,7 +29,7 @@ public class AdaptiveWebViewActivity extends YzsBaseActivity {
     @Override
     protected void initView() {
         webView = (AdaptiveWebView) findViewById(R.id.adaptiveWebView);
-        webView.setWebViewClient(new WebViewClient(){
+        webView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
@@ -56,12 +56,14 @@ public class AdaptiveWebViewActivity extends YzsBaseActivity {
 
     @Override
     protected void initLogic() {
-
+        setTitle(title);
     }
+
+    private String title;
 
     @Override
     protected void getBundleExtras(Bundle extras) {
-
+        title = extras.getString("title");
     }
 
     @Override

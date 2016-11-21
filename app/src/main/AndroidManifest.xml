@@ -21,11 +21,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.FirstViewActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.FirstViewActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".activity.AdaptiveWebViewActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.AdaptiveWebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.StateButtonActivity"
+            android:screenOrientation="portrait" />
+
 
     </application>
 

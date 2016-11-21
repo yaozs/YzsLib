@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipToPadding="true"
-    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <include layout="@layout/item_title" />
@@ -20,16 +19,16 @@
 
     <com.yzs.yzslibrary.view.togglebutton.ToggleButton
         android:id="@+id/toggleButton"
-
         android:layout_width="54dp"
-        android:layout_height="30dp" />
-
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp" />
+    <!--尽量不用设置成宽度自适应，因为控件会随着文字的长度变化-->
     <com.yzs.yzslibrary.view.nicespinner.NiceSpinner
         android:id="@+id/nice_spinner"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
         app:textTint="@color/colorPrimary" />
 
 </LinearLayout>

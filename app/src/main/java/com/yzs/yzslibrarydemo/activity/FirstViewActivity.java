@@ -37,6 +37,7 @@ public class FirstViewActivity extends YzsBaseActivity {
 
     @Override
     protected void initLogic() {
+        setTitle(title);
         showLoadingDialog();
         final ArrayList<String> strs = new ArrayList<>();
         strs.add("哎呦，不错哦");
@@ -85,7 +86,8 @@ public class FirstViewActivity extends YzsBaseActivity {
         });
 
 
-        final List<String> dataset = new LinkedList<>(Arrays.asList("最新发布", "最多点赞"));
+        final List<String> dataset = new LinkedList<>(Arrays.asList("最新发布", "最多点赞",
+                "最新发布1最新发布1最新发布1", "最多点赞1","最新发布222", "点赞"));
 
         niceSpinner.attachDataSource(dataset);
         niceSpinner.addOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -96,9 +98,11 @@ public class FirstViewActivity extends YzsBaseActivity {
         });
     }
 
+    private String title;
+
     @Override
     protected void getBundleExtras(Bundle extras) {
-
+        title = extras.getString("title");
     }
 
     @Override
