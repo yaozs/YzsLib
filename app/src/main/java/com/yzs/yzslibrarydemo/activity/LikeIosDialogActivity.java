@@ -8,22 +8,23 @@ import android.widget.Toast;
 import com.yzs.yzslibrary.base.YzsBaseActivity;
 import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrary.view.ActionSheetDialog;
-import com.yzs.yzslibrary.view.AlertDialog;
+import com.yzs.yzslibrary.view.IosAlertDialog;
 import com.yzs.yzslibrarydemo.R;
 
 /**
  * 创建人：姚智胜
  * 创建时间： 2016/11/22.
- * 简介：
+ * 简介：仿ios的dialog
  */
 
-public class LikeIosDialogActivity extends YzsBaseActivity implements View.OnClickListener{
+public class LikeIosDialogActivity extends YzsBaseActivity implements View.OnClickListener {
 
     private Button btn1;
     private Button btn2;
     private Button btn3;
     private Button btn4;
     private Button btn5;
+
     @Override
     protected void initContentView(Bundle bundle) {
         setContentView(R.layout.ac_like_ios_dialog);
@@ -31,20 +32,21 @@ public class LikeIosDialogActivity extends YzsBaseActivity implements View.OnCli
 
     @Override
     protected void initView() {
-        btn1 = (Button) findViewById(R.id.btn1);
+        btn1 = (Button) findViewById(R.id.btn1_ac_like_ios_dialog);
 
-        btn2 = (Button) findViewById(R.id.btn2);
+        btn2 = (Button) findViewById(R.id.btn2_ac_like_ios_dialog);
 
-        btn3 = (Button) findViewById(R.id.btn3);
+        btn3 = (Button) findViewById(R.id.btn3_ac_like_ios_dialog);
 
-        btn4 = (Button) findViewById(R.id.btn4);
+        btn4 = (Button) findViewById(R.id.btn4_ac_like_ios_dialog);
 
-        btn5 = (Button) findViewById(R.id.btn5);
+        btn5 = (Button) findViewById(R.id.btn5_ac_like_ios_dialog);
 
     }
 
     @Override
     protected void initLogic() {
+        setTitle(title);
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
@@ -52,9 +54,11 @@ public class LikeIosDialogActivity extends YzsBaseActivity implements View.OnCli
         btn5.setOnClickListener(this);
     }
 
+    private String title;
+
     @Override
     protected void getBundleExtras(Bundle extras) {
-
+        title = extras.getString("title");
     }
 
     @Override
@@ -65,12 +69,12 @@ public class LikeIosDialogActivity extends YzsBaseActivity implements View.OnCli
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn1:
+            case R.id.btn1_ac_like_ios_dialog:
                 new ActionSheetDialog(LikeIosDialogActivity.this)
                         .builder()
                         .setTitle("清空消息列表后，聊天记录依然保留，确定要清空消息列表？")
                         .setCancelable(false)
-                        .setCanceledOnTouchOutside(false)
+                        .setCanceledOnTouchOutside(true)//设置点击其他地方与返回是否消失 true为消失
                         .addSheetItem("清空消息列表", ActionSheetDialog.SheetItemColor.Red,
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
@@ -79,7 +83,7 @@ public class LikeIosDialogActivity extends YzsBaseActivity implements View.OnCli
                                     }
                                 }).show();
                 break;
-            case R.id.btn2:
+            case R.id.btn2_ac_like_ios_dialog:
                 new ActionSheetDialog(LikeIosDialogActivity.this)
                         .builder()
                         .setCancelable(false)
@@ -127,7 +131,7 @@ public class LikeIosDialogActivity extends YzsBaseActivity implements View.OnCli
                                     }
                                 }).show();
                 break;
-            case R.id.btn3:
+            case R.id.btn3_ac_like_ios_dialog:
                 new ActionSheetDialog(LikeIosDialogActivity.this)
                         .builder()
                         .setTitle("请选择操作")
@@ -224,8 +228,8 @@ public class LikeIosDialogActivity extends YzsBaseActivity implements View.OnCli
                                     }
                                 }).show();
                 break;
-            case R.id.btn4:
-                new AlertDialog(LikeIosDialogActivity.this).builder().setTitle("退出当前账号")
+            case R.id.btn4_ac_like_ios_dialog:
+                new IosAlertDialog(LikeIosDialogActivity.this).builder().setTitle("退出当前账号")
                         .setMsg("再连续登陆15天，就可变身为QQ达人。退出QQ可能会使你现有记录归零，确定退出？")
                         .setPositiveButton("确认退出", new View.OnClickListener() {
                             @Override
@@ -239,8 +243,8 @@ public class LikeIosDialogActivity extends YzsBaseActivity implements View.OnCli
                     }
                 }).show();
                 break;
-            case R.id.btn5:
-                new AlertDialog(LikeIosDialogActivity.this).builder()
+            case R.id.btn5_ac_like_ios_dialog:
+                new IosAlertDialog(LikeIosDialogActivity.this).builder()
                         .setMsg("你现在无法接收到新消息提醒。请到系统-设置-通知中开启消息提醒")
                         .setNegativeButton("确定", new View.OnClickListener() {
                             @Override

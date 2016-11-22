@@ -84,4 +84,14 @@
         <attr name="animationDuration" format="integer|reference" />
 
     </declare-styleable>
+    <!--可调节图片大小的单选按钮-->
+    <declare-styleable name="BMRadioButton">
+        <attr name="BMdrawableSize" format="dimension" />
+        <attr name="BMdrawableWidth" format="dimension" />
+        <attr name="BMdrawableHeight" format="dimension" />
+        <attr name="BMdrawableTop" format="reference" />
+        <attr name="BMdrawableBottom" format="reference" />
+        <attr name="BMdrawableRight" format="reference" />
+        <attr name="BMdrawableLeft" format="reference" />
+    </declare-styleable>
 </resources>

@@ -32,6 +32,9 @@
         <activity
             android:name=".activity.StateButtonActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LikeIosDialogActivity"
+            android:screenOrientation="portrait" />
 
 
     </application>

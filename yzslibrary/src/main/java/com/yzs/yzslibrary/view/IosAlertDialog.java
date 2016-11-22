@@ -16,8 +16,13 @@ import android.widget.TextView;
 
 import com.yzs.yzslibrary.R;
 
-
-public class AlertDialog {
+/**
+ * Author: 姚智胜
+ * Version: V1.0版本
+ * Description: 仿ios的中间弹出dialog
+ * Date: 2016/11/22
+ */
+public class IosAlertDialog {
 	private Context context;
 	private Dialog dialog;
 	private LinearLayout lLayout_bg;
@@ -32,14 +37,14 @@ public class AlertDialog {
 	private boolean showPosBtn = false;
 	private boolean showNegBtn = false;
 
-	public AlertDialog(Context context) {
+	public IosAlertDialog(Context context) {
 		this.context = context;
 		WindowManager windowManager = (WindowManager) context
 				.getSystemService(Context.WINDOW_SERVICE);
 		display = windowManager.getDefaultDisplay();
 	}
 
-	public AlertDialog builder() {
+	public IosAlertDialog builder() {
 		// 获取Dialog布局
 		View view = LayoutInflater.from(context).inflate(
 				R.layout.view_alertdialog, null);
@@ -68,7 +73,7 @@ public class AlertDialog {
 		return this;
 	}
 
-	public AlertDialog setTitle(String title) {
+	public IosAlertDialog setTitle(String title) {
 		showTitle = true;
 		if ("".equals(title)) {
 			txt_title.setText("标题");
@@ -78,7 +83,7 @@ public class AlertDialog {
 		return this;
 	}
 
-	public AlertDialog setMsg(String msg) {
+	public IosAlertDialog setMsg(String msg) {
 		showMsg = true;
 		if ("".equals(msg)) {
 			txt_msg.setText("内容");
@@ -88,12 +93,12 @@ public class AlertDialog {
 		return this;
 	}
 
-	public AlertDialog setCancelable(boolean cancel) {
+	public IosAlertDialog setCancelable(boolean cancel) {
 		dialog.setCancelable(cancel);
 		return this;
 	}
 
-	public AlertDialog setPositiveButton(String text,
+	public IosAlertDialog setPositiveButton(String text,
 										 final OnClickListener listener) {
 		showPosBtn = true;
 		if ("".equals(text)) {
@@ -111,7 +116,7 @@ public class AlertDialog {
 		return this;
 	}
 
-	public AlertDialog setNegativeButton(String text,
+	public IosAlertDialog setNegativeButton(String text,
 										 final OnClickListener listener) {
 		showNegBtn = true;
 		if ("".equals(text)) {

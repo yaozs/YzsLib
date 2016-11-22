@@ -8,31 +8,31 @@
     <include layout="@layout/item_title" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btn1_ac_like_ios_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="消息" />
 
     <Button
-        android:id="@+id/btn2"
+        android:id="@+id/btn2_ac_like_ios_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="图片" />
 
     <Button
-        android:id="@+id/btn3"
+        android:id="@+id/btn3_ac_like_ios_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="列表" />
 
     <Button
-        android:id="@+id/btn4"
+        android:id="@+id/btn4_ac_like_ios_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="按钮一" />
 
     <Button
-        android:id="@+id/btn5"
+        android:id="@+id/btn5_ac_like_ios_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="按钮二" />

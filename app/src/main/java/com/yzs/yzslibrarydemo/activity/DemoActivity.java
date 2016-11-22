@@ -70,6 +70,10 @@ public class DemoActivity extends YzsBaseActivity {
         bean.setClazz(StateButtonActivity.class);
         bean.setName("不用写selector的button+EventBus示范");
         list.add(bean);
+        bean = new DemoBean();
+        bean.setClazz(LikeIosDialogActivity.class);
+        bean.setName("仿ios的dialog");
+        list.add(bean);
         adapter.addData(list);
     }
 

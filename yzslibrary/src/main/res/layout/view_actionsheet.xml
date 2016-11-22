@@ -44,7 +44,6 @@
         android:gravity="center"
         android:text="取消"
         android:textColor="@color/actionsheet_blue"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="18sp" />
 
 </LinearLayout>
