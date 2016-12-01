@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    style="@style/activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title" />
+
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        custom:auto_cycle="true"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+
+    <com.daimajia.slider.library.Indicators.PagerIndicator
+        android:id="@+id/custom_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        custom:selected_color="#FF5500"
+        custom:selected_height="3dp"
+        custom:selected_padding_left="2dp"
+        custom:selected_padding_right="2dp"
+        custom:selected_width="16dp"
+        custom:shape="rect"
+        custom:unselected_color="#55333333"
+        custom:unselected_height="3dp"
+        custom:unselected_padding_left="2dp"
+        custom:unselected_padding_right="2dp"
+        custom:unselected_width="16dp" />
+</LinearLayout>

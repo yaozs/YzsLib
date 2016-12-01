@@ -1,5 +1,6 @@
 package com.yzs.yzslibrarydemo.app;
 
+import com.squareup.leakcanary.LeakCanary;
 import com.yzs.yzslibrary.app.BaseApp;
 import com.yzs.yzslibrary.util.ToastUtils;
 
@@ -16,5 +17,12 @@ public class YzsApp extends BaseApp {
     protected void onInitCreate() {
         //初始化Toast
         ToastUtils.init(true);
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        LeakCanary.install(this);
+        // Normal app init code...
     }
 }

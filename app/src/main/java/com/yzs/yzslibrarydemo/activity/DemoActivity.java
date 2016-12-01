@@ -74,6 +74,10 @@ public class DemoActivity extends YzsBaseActivity {
         bean.setClazz(LikeIosDialogActivity.class);
         bean.setName("仿ios的dialog");
         list.add(bean);
+        bean = new DemoBean();
+        bean.setClazz(AndroidImageSliderActivity.class);
+        bean.setName("AndroidImageSliderActivity");
+        list.add(bean);
         adapter.addData(list);
     }
 
