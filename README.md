@@ -36,3 +36,4 @@
                    封装eventbus到activity与fragment中
         * 16.11.21 增加YzsBaseWebActivity,更新整合Demo展示，增加StateButton——不用写selector的button
         * 16.11.22 增加仿ios的dialog,增加scrollview中嵌套listview，gridview，与scrollview中嵌套recyclerview
+        * 16.12.1  增加AndroidImageSlider广告轮播控件，改造成为支持glide加载
