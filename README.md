@@ -19,7 +19,8 @@
         目前最新版本为0.0.2，就是最新的release版本，之后引用修改版本号就可以 
         YzsLib开源交流群：331973212
         
-        一个共享的资源库，本人会逐渐完善，让他越来越完美
+        一个共享的快速开发框架，本人会逐渐完善，让他越来越完美
+        
         * 16.10.23 更新了NoticeView，公告条控件，支持绑定activity与fragment生命周期
         * 16.10.24 更新了base类
         * 16.11.3  更新控件nicespiner（美观又动画的自定义spinner），toggleButton（仿苹果滑动按钮）
@@ -37,3 +38,6 @@
         * 16.11.21 增加YzsBaseWebActivity,更新整合Demo展示，增加StateButton——不用写selector的button
         * 16.11.22 增加仿ios的dialog,增加scrollview中嵌套listview，gridview，与scrollview中嵌套recyclerview
         * 16.12.1  增加AndroidImageSlider广告轮播控件，改造成为支持glide加载
+        
+        
+        喜欢的话给个star，留下点印记吧，近期会将预览图片更新到readme中。
