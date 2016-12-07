@@ -9,7 +9,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
-import com.yzs.yzslibrary.base.YzsBaseActivity;
+import com.yzs.yzslibrary.base.activity.YzsBaseActivity;
 import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrarydemo.R;
 

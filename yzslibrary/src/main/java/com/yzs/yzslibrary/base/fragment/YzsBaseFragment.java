@@ -1,4 +1,4 @@
-package com.yzs.yzslibrary.base;
+package com.yzs.yzslibrary.base.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;

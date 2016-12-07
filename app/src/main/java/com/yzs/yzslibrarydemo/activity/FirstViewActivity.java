@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 
-import com.yzs.yzslibrary.base.YzsBaseActivity;
+import com.yzs.yzslibrary.base.activity.YzsBaseActivity;
 import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrary.view.NoticeView;
 import com.yzs.yzslibrary.view.nicespinner.NiceSpinner;

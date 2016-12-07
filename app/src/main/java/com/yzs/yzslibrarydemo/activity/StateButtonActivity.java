@@ -3,7 +3,7 @@ package com.yzs.yzslibrarydemo.activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.yzs.yzslibrary.base.YzsBaseActivity;
+import com.yzs.yzslibrary.base.activity.YzsBaseActivity;
 import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrary.view.StateButton;
 import com.yzs.yzslibrarydemo.R;

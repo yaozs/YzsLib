@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
-import com.yzs.yzslibrary.base.YzsBaseActivity;
+import com.yzs.yzslibrary.base.activity.YzsBaseActivity;
 import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrary.view.recyclerview.DividerItemDecoration;
 import com.yzs.yzslibrarydemo.R;

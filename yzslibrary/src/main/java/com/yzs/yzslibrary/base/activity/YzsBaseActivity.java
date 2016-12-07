@@ -1,4 +1,4 @@
-package com.yzs.yzslibrary.base;
+package com.yzs.yzslibrary.base.activity;
 
 import android.annotation.TargetApi;
 import android.content.Intent;

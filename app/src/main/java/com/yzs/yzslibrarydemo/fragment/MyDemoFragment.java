@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
-import com.yzs.yzslibrary.base.YzsBaseFragment;
+import com.yzs.yzslibrary.base.fragment.YzsBaseFragment;
 import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrary.view.AdaptiveWebView;
 import com.yzs.yzslibrary.view.NoticeView;
