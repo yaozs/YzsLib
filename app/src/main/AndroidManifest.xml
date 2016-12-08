@@ -38,6 +38,9 @@
         <activity
             android:name=".activity.AndroidImageSliderActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UseAdapterActivity"
+            android:screenOrientation="portrait" />
 
 
     </application>

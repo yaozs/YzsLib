@@ -78,6 +78,10 @@ public class DemoActivity extends YzsBaseActivity {
         bean.setClazz(AndroidImageSliderActivity.class);
         bean.setName("AndroidImageSliderActivity");
         list.add(bean);
+        bean = new DemoBean();
+        bean.setClazz(UseAdapterActivity.class);
+        bean.setName("UseAdapterActivity");
+        list.add(bean);
         adapter.addData(list);
     }
 

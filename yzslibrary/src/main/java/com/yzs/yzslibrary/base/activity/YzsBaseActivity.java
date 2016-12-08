@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -44,6 +45,7 @@ public abstract class YzsBaseActivity extends SupportActivity {
 
     public boolean useTitle = true;
 
+    public Toolbar mToolbar;
     public TextView title;
     public ImageView back;
     public TextView tv_menu;
@@ -59,15 +61,22 @@ public abstract class YzsBaseActivity extends SupportActivity {
             tintManager.setStatusBarTintEnabled(true);
             tintManager.setStatusBarTintResource(R.color.colorPrimaryDark);//通知栏所需颜色
         }
+
+
         Bundle extras = getIntent().getExtras();
         if (null != extras) {
             getBundleExtras(extras);
         }
         EventBus.getDefault().register(this);
         initContentView(savedInstanceState);
-        if (useTitle) {
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (null != mToolbar) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
             initTitle();
         }
+
+
         initView();
         initLogic();
 
