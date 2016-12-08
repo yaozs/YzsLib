@@ -1,8 +1,11 @@
 package com.yzs.yzslibrarydemo.app;
 
+import com.orhanobut.logger.Logger;
 import com.squareup.leakcanary.LeakCanary;
 import com.yzs.yzslibrary.app.BaseApp;
 import com.yzs.yzslibrary.util.ToastUtils;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 /**
  * Author: 姚智胜
@@ -17,6 +20,7 @@ public class YzsApp extends BaseApp {
     protected void onInitCreate() {
         //初始化Toast
         ToastUtils.init(true);
+        Logger.init(TAG);
         if (LeakCanary.isInAnalyzerProcess(this)) {
             // This process is dedicated to LeakCanary for heap analysis.
             // You should not init your app in this process.

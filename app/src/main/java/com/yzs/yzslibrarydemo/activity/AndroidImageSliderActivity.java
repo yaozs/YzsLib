@@ -9,6 +9,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+import com.orhanobut.logger.Logger;
 import com.yzs.yzslibrary.base.activity.YzsBaseActivity;
 import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrarydemo.R;
@@ -80,7 +81,6 @@ public class AndroidImageSliderActivity extends YzsBaseActivity {
         });
 
 
-
         TextSliderView textSliderView3 = new TextSliderView(this);
         textSliderView3.setScaleType(BaseSliderView.ScaleType.CenterCrop);
         textSliderView3.image("http://m.360buyimg.com/mobilecms/s300x98_jfs/t1363/77/1381395719/60705/ce91ad5c/55dd271aN49efd216.jpg");
@@ -115,21 +115,20 @@ public class AndroidImageSliderActivity extends YzsBaseActivity {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
 
-
-                Log.d(TAG,"onPageScrolled");
+                Logger.d(TAG, "onPageScrolled");
 
             }
 
             @Override
             public void onPageSelected(int i) {
 
-                Log.d(TAG,"onPageSelected");
+                Logger.d(TAG, "onPageSelected");
             }
 
             @Override
             public void onPageScrollStateChanged(int i) {
 
-                Log.d(TAG,"onPageScrollStateChanged");
+                Logger.d(TAG, "onPageScrollStateChanged");
             }
         });
 
