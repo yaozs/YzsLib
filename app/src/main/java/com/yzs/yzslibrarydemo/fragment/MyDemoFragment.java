@@ -36,16 +36,15 @@ public class MyDemoFragment extends YzsBaseFragment {
     private NiceSpinner niceSpinner;
     private AdaptiveWebView webView;
 
-    private View view;
 
     @Override
     protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = createFragmentView(inflater, container, R.layout.ac_first_view);
+        View view = createFragmentView(inflater, container, R.layout.ac_first_view);
         return view;
     }
 
     @Override
-    protected void initView() {
+    protected void initView(View view) {
         switcherView = (NoticeView) view.findViewById(R.id.switcherView);
         toggleButton = (ToggleButton) view.findViewById(R.id.toggleButton);
         niceSpinner = (NiceSpinner) view.findViewById(R.id.nice_spinner);
@@ -54,7 +53,7 @@ public class MyDemoFragment extends YzsBaseFragment {
     }
 
     @Override
-    protected void initLogic() {
+    protected void initLogic(View view) {
         showLoadingDialog();
         final ArrayList<String> strs = new ArrayList<>();
         strs.add("哎呦，不错哦");

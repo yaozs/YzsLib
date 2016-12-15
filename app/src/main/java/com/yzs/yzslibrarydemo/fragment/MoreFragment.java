@@ -18,21 +18,20 @@ import com.yzs.yzslibrarydemo.R;
  */
 public class MoreFragment extends YzsBaseFragment {
     private static final String TAG = "MoreFragment";
-    private View view;
 
     @Override
     protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fg_more, container, false);
+        View view = inflater.inflate(R.layout.fg_more, container, false);
         return view;
     }
 
     @Override
-    protected void initView() {
+    protected void initView(View view) {
 
     }
 
     @Override
-    protected void initLogic() {
+    protected void initLogic(View view) {
 
     }
 

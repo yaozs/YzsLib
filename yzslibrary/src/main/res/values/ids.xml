@@ -6,4 +6,6 @@
     <item name="toolbar_layout_menu" type="id" />
     <item name="toolbar_iv_menu" type="id" />
     <item name="toolbar_tv_menu" type="id" />
+    <!-- 使用baselist需要使用的id -->
+    <item name="base_list" type="id" />
 </resources>

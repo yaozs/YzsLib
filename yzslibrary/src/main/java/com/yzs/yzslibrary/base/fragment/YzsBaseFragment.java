@@ -3,10 +3,13 @@ package com.yzs.yzslibrary.base.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.yzs.yzslibrary.entity.EventCenter;
 import com.yzs.yzslibrary.util.LoadingDialog;
@@ -26,6 +29,12 @@ public abstract class YzsBaseFragment extends SupportFragment {
     private static final String TAG = "YzsBaseFragment";
     protected android.view.View rootView;
 
+    public Toolbar mToolbar;
+    public TextView title;
+    public ImageView back;
+    public TextView tv_menu;
+    public ImageView iv_menu;
+
     public YzsBaseFragment() { /* compiled code */ }
 
     @Override
@@ -36,8 +45,8 @@ public abstract class YzsBaseFragment extends SupportFragment {
             getBundleExtras(getArguments());
         }
         View view = initContentView(inflater, container, savedInstanceState);
-        initView();
-        initLogic();
+        initView(view);
+        initLogic(view);
         return view;
     }
 
@@ -60,10 +69,10 @@ public abstract class YzsBaseFragment extends SupportFragment {
                                             @Nullable Bundle savedInstanceState);
 
     // 初始化控件
-    protected abstract void initView();
+    protected abstract void initView(View view);
 
     // 逻辑处理
-    protected abstract void initLogic();
+    protected abstract void initLogic(View view);
 
 
     /**

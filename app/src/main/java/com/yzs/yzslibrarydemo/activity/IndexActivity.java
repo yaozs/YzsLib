@@ -1,10 +1,6 @@
 package com.yzs.yzslibrarydemo.activity;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
@@ -21,9 +17,6 @@ import com.yzs.yzslibrarydemo.fragment.MsgFragment;
 import com.yzs.yzslibrarydemo.fragment.PersonFragment;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import me.yokeyword.fragmentation.SupportFragment;
 
 /**
  * Author: 姚智胜
@@ -145,6 +138,5 @@ public class IndexActivity extends YzsBaseActivity {
         });
 
     }
-
 
 }

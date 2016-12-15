@@ -19,11 +19,10 @@ import com.yzs.yzslibrarydemo.R;
 public class HomeFragment extends YzsBaseFragment {
     private static final String TAG = "HomeFragment";
 
-    private View view;
 
     public static HomeFragment newInstance(Bundle bundle) {
         HomeFragment fragment = new HomeFragment();
-        if (null!=bundle){
+        if (null != bundle) {
             fragment.setArguments(bundle);
         }
         return fragment;
@@ -31,17 +30,17 @@ public class HomeFragment extends YzsBaseFragment {
 
     @Override
     protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fg_home, container, false);
+        View view = inflater.inflate(R.layout.fg_home, container, false);
         return view;
     }
 
     @Override
-    protected void initView() {
+    protected void initView(View view) {
 
     }
 
     @Override
-    protected void initLogic() {
+    protected void initLogic(View view) {
 
     }
 

@@ -101,12 +101,14 @@ public abstract class YzsBaseActivity extends SupportActivity {
         back = (ImageView) findViewById(R.id.toolbar_back);
         iv_menu = (ImageView) findViewById(R.id.toolbar_iv_menu);
         tv_menu = (TextView) findViewById(R.id.toolbar_tv_menu);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        if (null != back) {
+            back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
+        }
     }
 
     public void setTitle(String string) {

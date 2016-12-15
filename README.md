@@ -39,6 +39,6 @@
         * 16.11.22 增加仿ios的dialog,增加scrollview中嵌套listview，gridview，与scrollview中嵌套recyclerview
         * 16.12.1  增加AndroidImageSlider广告轮播控件，改造成为支持glide加载
         * 16.12.7  base重新分包，添加listView、gridview等的adapter，与BaseRecyclerViewAdapterHelper呼应共同维护list数据
-        
+        * 16.12.15 新增baseListActivity，baseListFragment，新增导航条控件，更新demo整体效果，更像一个app
         
         喜欢的话给个star，留下点印记吧，近期会将预览图片更新到readme中。
