@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.DemoActivity"
+            android:name=".activity.IndexActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -20,6 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.DemoActivity"
+            android:label="首页"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".activity.FirstViewActivity"
