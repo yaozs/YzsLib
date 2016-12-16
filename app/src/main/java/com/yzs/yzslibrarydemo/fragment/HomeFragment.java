@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 
 import com.yzs.yzslibrary.base.fragment.YzsBaseFragment;
 import com.yzs.yzslibrary.entity.EventCenter;
+import com.yzs.yzslibrary.view.StateButton;
 import com.yzs.yzslibrarydemo.R;
+import com.yzs.yzslibrarydemo.activity.DemoActivity;
 
 /**
  * Author: 姚智胜
@@ -36,7 +38,13 @@ public class HomeFragment extends YzsBaseFragment {
 
     @Override
     protected void initView(View view) {
-
+        StateButton button = (StateButton) view.findViewById(R.id.btn_fg_home);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                readyGo(DemoActivity.class);
+            }
+        });
     }
 
     @Override

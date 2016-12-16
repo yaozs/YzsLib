@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:layout_height="match_parent">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:textSize="30sp"
-        android:text="HOME" />
-</LinearLayout>
+        android:text="HOME"
+        android:textSize="30sp" />
+
+
+    <com.yzs.yzslibrary.view.StateButton
+        android:id="@+id/btn_fg_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="去例子集合"
+        app:animationDuration="200"
+        app:normalStrokeColor="@color/md_yellow_500"
+        app:normalStrokeWidth="2dp"
+        app:normalTextColor="@color/md_yellow_500"
+        app:pressedBackgroundColor="@color/colorPrimaryDark"
+        app:pressedTextColor="@color/md_yellow_500"
+        app:radius="5dp" />
+</FrameLayout>

@@ -1,5 +1,7 @@
 # YzsLib
-       
+
+![](https://github.com/yaozs/YzsLib/tree/master/app/src/main/res/mipmap-xxxhdpi/icon.png) 
+    
         远程依赖方法在项目根目录下的build.gradle添加如下
         allprojects {
         		repositories {
@@ -41,4 +43,12 @@
         * 16.12.7  base重新分包，添加listView、gridview等的adapter，与BaseRecyclerViewAdapterHelper呼应共同维护list数据
         * 16.12.15 新增baseListActivity，baseListFragment，新增导航条控件，更新demo整体效果，更像一个app
         
-        喜欢的话给个star，留下点印记吧，近期会将预览图片更新到readme中。
+![](https://github.com/yaozs/YzsLib/tree/master/app/src/main/res/mipmap-xxxhdpi/icon.png) 
+![](https://github.com/yaozs/YzsLib/tree/master/app/src/main/res/mipmap-xxxhdpi/icon.png) 
+![](https://github.com/yaozs/YzsLib/tree/master/app/src/main/res/mipmap-xxxhdpi/icon.png) 
+![](https://github.com/yaozs/YzsLib/tree/master/app/src/main/res/mipmap-xxxhdpi/icon.png) 
+![](https://github.com/yaozs/YzsLib/tree/master/app/src/main/res/mipmap-xxxhdpi/icon.png) 
+![](https://github.com/yaozs/YzsLib/tree/master/app/src/main/res/mipmap-xxxhdpi/icon.png) 
+
+        
+        喜欢的话给个star，留下点印记吧.
