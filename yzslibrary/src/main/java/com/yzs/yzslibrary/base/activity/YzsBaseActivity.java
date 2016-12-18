@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yzs.yzslibrary.R;
 import com.yzs.yzslibrary.entity.EventCenter;
-import com.yzs.yzslibrary.util.LoadingDialog;
+import com.yzs.yzslibrary.util.loading.LoadingDialog;
 import com.yzs.yzslibrary.util.SystemBarTintManager;
 import com.yzs.yzslibrary.util.ToastUtils;
 
@@ -172,19 +172,57 @@ public abstract class YzsBaseActivity extends SupportActivity {
     }
 
     /**
-     * 显示加载动画
+     * 显示默认加载动画 默认加载文字
      */
     protected void showLoadingDialog() {
         LoadingDialog.showLoadingDialog(this);
     }
 
     /**
-     * 显示加载动画 自定义加载文字
+     * 显示加载动画 默认加载文字
+     *
+     * @param type
+     */
+    protected void showLoadingDialog(int type) {
+        LoadingDialog.showLoadingDialog(this, type);
+    }
+
+    /**
+     * 显示加载动画 默认加载文字，自定义图片
+     *
+     * @param type
+     */
+    protected void showLoadingDialog(int type, int drawableId) {
+        LoadingDialog.showLoadingDialog(this, type, drawableId);
+    }
+
+    /**
+     * 显示默认加载动画 自定义加载文字
      *
      * @param str
      */
     protected void showLoadingDialog(String str) {
         LoadingDialog.showLoadingDialog(this, str);
+    }
+
+    /**
+     * 显示加载动画 自定义加载文字
+     *
+     * @param type
+     * @param str
+     */
+    protected void showLoadingDialog(int type, String str) {
+        LoadingDialog.showLoadingDialog(this, type, str);
+    }
+
+    /**
+     * 显示加载动画 自定义加载文字 自定义图片(只对YzsDialog有效果)
+     *
+     * @param type
+     * @param str
+     */
+    protected void showLoadingDialog(int type, String str, int drawable) {
+        LoadingDialog.showLoadingDialog(this, type, str, drawable);
     }
 
     /**

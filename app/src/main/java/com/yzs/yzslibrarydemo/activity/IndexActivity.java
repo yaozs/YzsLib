@@ -9,6 +9,7 @@ import com.orhanobut.logger.Logger;
 import com.yzs.yzslibrary.base.activity.YzsBaseActivity;
 import com.yzs.yzslibrary.base.fragment.YzsBaseFragment;
 import com.yzs.yzslibrary.entity.EventCenter;
+import com.yzs.yzslibrary.util.loading.LoadingDialog;
 import com.yzs.yzslibrarydemo.R;
 import com.yzs.yzslibrarydemo.entity.TabEntity;
 import com.yzs.yzslibrarydemo.fragment.HomeFragment;
@@ -95,6 +96,8 @@ public class IndexActivity extends YzsBaseActivity {
 
     @Override
     protected void initLogic() {
+        showLoadingDialog(LoadingDialog.YZS_LOADING,R.mipmap.icon);
+//        showLoadingDialog();
 
     }
 

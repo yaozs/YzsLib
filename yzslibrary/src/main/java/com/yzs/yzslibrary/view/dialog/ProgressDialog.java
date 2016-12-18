@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.orhanobut.logger.Logger;
 import com.yzs.yzslibrary.R;
 
 
@@ -46,6 +47,7 @@ public class ProgressDialog extends Dialog{
         if(message != null){
             tvMessage.setText(message);
         }
+        Logger.e(TAG + "onCreate");
     }
 
     public void show(String message) {

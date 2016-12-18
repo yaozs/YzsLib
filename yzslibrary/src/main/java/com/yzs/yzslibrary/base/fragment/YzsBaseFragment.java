@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.yzs.yzslibrary.entity.EventCenter;
-import com.yzs.yzslibrary.util.LoadingDialog;
+import com.yzs.yzslibrary.util.loading.LoadingDialog;
 import com.yzs.yzslibrary.util.ToastUtils;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -104,20 +104,57 @@ public abstract class YzsBaseFragment extends SupportFragment {
     protected abstract void onEventComing(EventCenter center);
 
     /**
-     * 显示加载动画
+     * 显示默认加载动画 默认加载文字
      */
     protected void showLoadingDialog() {
         LoadingDialog.showLoadingDialog(getActivity());
     }
 
+    /**
+     * 显示加载动画 默认加载文字
+     *
+     * @param type
+     */
+    protected void showLoadingDialog(int type) {
+        LoadingDialog.showLoadingDialog(getActivity(), type);
+    }
 
     /**
-     * 显示加载动画 自定义加载文字
+     * 显示加载动画 默认加载文字，自定义图片
+     *
+     * @param type
+     */
+    protected void showLoadingDialog(int type, int drawableId) {
+        LoadingDialog.showLoadingDialog(getActivity(), type, drawableId);
+    }
+
+    /**
+     * 显示默认加载动画 自定义加载文字
      *
      * @param str
      */
     protected void showLoadingDialog(String str) {
         LoadingDialog.showLoadingDialog(getActivity(), str);
+    }
+
+    /**
+     * 显示加载动画 自定义加载文字
+     *
+     * @param type
+     * @param str
+     */
+    protected void showLoadingDialog(int type, String str) {
+        LoadingDialog.showLoadingDialog(getActivity(), type, str);
+    }
+
+    /**
+     * 显示加载动画 自定义加载文字 自定义图片(只对YzsDialog有效果)
+     *
+     * @param type
+     * @param str
+     */
+    protected void showLoadingDialog(int type, String str, int drawable) {
+        LoadingDialog.showLoadingDialog(getActivity(), type, str, drawable);
     }
 
     /**
