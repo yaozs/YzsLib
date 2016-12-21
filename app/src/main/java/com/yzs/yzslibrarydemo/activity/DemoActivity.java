@@ -1,8 +1,6 @@
 package com.yzs.yzslibrarydemo.activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -29,6 +27,10 @@ public class DemoActivity extends YzsBaseListActivity<DemoBean> {
     @Override
     protected void initContentView(Bundle bundle) {
         setContentView(R.layout.ac_demo);
+    }
+
+    @Override
+    protected void initLayoutResId() {
         setLayoutResId(R.layout.item_demo);
     }
 
@@ -55,6 +57,7 @@ public class DemoActivity extends YzsBaseListActivity<DemoBean> {
     protected void onEventComing(EventCenter center) {
 
     }
+
 
     @Override
     protected void MyHolder(BaseViewHolder baseViewHolder, DemoBean demoBean) {

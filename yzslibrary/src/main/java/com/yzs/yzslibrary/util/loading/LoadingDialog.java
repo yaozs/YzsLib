@@ -32,22 +32,9 @@ public class LoadingDialog {
      * @param context context
      */
     public static void showLoadingDialog(Context context, int type) {
-        if (null == context) {
-            return;
-        }
-        switch (type) {
-            case PROGRESS_LOADING:
-                showProgressLoading(context);
-                break;
 
-            case YZS_LOADING:
-                showYzsLoading(context);
-                break;
+        showLoadingDialog(context, type, null, 0);
 
-            default:
-                showProgressLoading(context);
-                break;
-        }
     }
 
     /**
@@ -56,22 +43,9 @@ public class LoadingDialog {
      * @param context context
      */
     public static void showLoadingDialog(Context context, int type, String message) {
-        if (null == context) {
-            return;
-        }
-        switch (type) {
-            case PROGRESS_LOADING:
-                showProgressLoading(context, message);
-                break;
 
-            case YZS_LOADING:
-                showYzsLoading(context, message);
-                break;
+        showLoadingDialog(context, type, message, 0);
 
-            default:
-                showProgressLoading(context, message);
-                break;
-        }
     }
 
     /**
@@ -80,22 +54,9 @@ public class LoadingDialog {
      * @param context context
      */
     public static void showLoadingDialog(Context context, int type, int drawableId) {
-        if (null == context) {
-            return;
-        }
-        switch (type) {
-            case PROGRESS_LOADING:
-                showProgressLoading(context);
-                break;
 
-            case YZS_LOADING:
-                showYzsLoading(context, drawableId);
-                break;
+        showLoadingDialog(context, type, null, drawableId);
 
-            default:
-                showProgressLoading(context);
-                break;
-        }
     }
 
     /**
@@ -137,7 +98,7 @@ public class LoadingDialog {
 
     private static void showProgressLoading(Context context, String message) {
         if (progressDialog == null) {
-            progressDialog = new ProgressDialog(context, message);
+            progressDialog = new ProgressDialog(context, null == message ? "请稍候" : message);
         }
         progressDialog.setCancelable(false);
         try {
@@ -186,7 +147,10 @@ public class LoadingDialog {
     }
 
     private static void showYzsLoading(Context context, String message, int drawableId) {
-        if (yzsLoadingDialog == null) {
+        if (yzsLoadingDialog == null && drawableId != 0) {
+            yzsLoadingDialog = new YzsLoadingDialog(context, message, context.getResources().
+                    getDrawable(drawableId));
+        } else {
             yzsLoadingDialog = new YzsLoadingDialog(context, message);
         }
         yzsLoadingDialog.setCancelable(false);

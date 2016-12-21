@@ -13,7 +13,7 @@ import com.yzs.yzslibrary.anim.Rotate3d;
 /**
  * Author: 姚智胜
  * Version: V1.0版本
- * Description:
+ * Description: 3D转动图片loading的dialog（全屏透明）
  * Date: 2016/12/18
  */
 public class YzsLoadingDialog extends Dialog {
@@ -39,13 +39,20 @@ public class YzsLoadingDialog extends Dialog {
         this.message = message;
     }
 
+    public YzsLoadingDialog(Context context, String message, Drawable drawable) {
+        super(context, R.style.YzsLoadingDialog);
+        this.context = context;
+        this.message = message;
+        this.drawable = drawable;
+    }
+
     public YzsLoadingDialog(Context context, int theme) {
         super(context, theme);
         this.context = context;
     }
 
     public YzsLoadingDialog(Context context, Drawable drawable) {
-        super(context);
+        super(context, R.style.YzsLoadingDialog);
         this.drawable = drawable;
     }
 

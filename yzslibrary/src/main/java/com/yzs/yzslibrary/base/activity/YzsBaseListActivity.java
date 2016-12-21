@@ -9,11 +9,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.yzs.yzslibrary.R;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.yzs.yzslibrary.R.style.activity;
 
 /**
  * Author: 姚智胜
@@ -61,6 +58,7 @@ public abstract class YzsBaseListActivity<T> extends YzsBaseActivity {
 
     @Override
     protected void initView() {
+        initLayoutResId();
         mRecyclerView = (RecyclerView) findViewById(R.id.base_list);
         chooseListType(mListType, mIsVertical);
         if (-1 == layoutResId) {
@@ -80,6 +78,11 @@ public abstract class YzsBaseListActivity<T> extends YzsBaseActivity {
     public void setLayoutResId(int layoutResId) {
         this.layoutResId = layoutResId;
     }
+
+    /**
+     * 初始化子布局
+     */
+    protected abstract void initLayoutResId();
 
     /**
      * 是否打开加载更多
