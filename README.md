@@ -41,8 +41,9 @@
         * 16.11.22 增加仿ios的dialog,增加scrollview中嵌套listview，gridview，与scrollview中嵌套recyclerview
         * 16.12.1  增加AndroidImageSlider广告轮播控件，改造成为支持glide加载
         * 16.12.7  base重新分包，添加listView、gridview等的adapter，与BaseRecyclerViewAdapterHelper呼应共同维护list数据
-        * 16.12.15 新增baseListActivity，baseListFragment，新增导航条控件，更新demo整体效果，更像一个app
+        * 16.12.15 新增baseListActivity(列表数据视图base父类)，baseListFragment，新增导航条控件，更新demo整体效果，更像一个app
         * 16.12.21 新增YzsLoadingDialog,可自定义图片的loading动画
+        * 16.12.22 新增YzsBaseHomeActivity(首页base父类)
 
 ![image](https://github.com/yaozs/YzsLib/blob/master/app/src/main/res/mipmap-xxxhdpi/icon.png)
 

@@ -10,26 +10,17 @@
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="84dp" />-->
     <FrameLayout
-        android:id="@+id/fl_ac_index"
+        android:id="@id/base_tabLayout_frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/design_bottom_navigation_height" />
 
 
     <com.flyco.tablayout.CommonTabLayout
-        android:id="@+id/tl_ac_index"
+        android:id="@id/base_tabLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/design_bottom_navigation_height"
         android:layout_gravity="bottom"
-        android:background="@color/md_white_1000"
-        tl:tl_iconHeight="23dp"
-        tl:tl_iconWidth="23dp"
-        tl:tl_indicator_color="@color/md_blue_500"
-        tl:tl_indicator_height="0dp"
-        tl:tl_textSelectColor="@color/md_blue_500"
-        tl:tl_textUnselectColor="@color/md_grey_600"
-        tl:tl_textsize="12sp"
-        tl:tl_underline_color="@color/md_grey_200"
-        tl:tl_underline_height="1dp" />
+        android:background="@color/md_white_1000" />
 
 </FrameLayout>

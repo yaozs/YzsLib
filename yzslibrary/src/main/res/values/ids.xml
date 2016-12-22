@@ -8,4 +8,9 @@
     <item name="toolbar_tv_menu" type="id" />
     <!-- 使用baselist需要使用的id -->
     <item name="base_list" type="id" />
+    <!-- 使用YzsBaseHomeActivity需要使用的id -->
+    <item name="base_tabLayout" type="id" />
+    <item name="base_tabLayout_viewPager" type="id" />
+    <item name="base_tabLayout_frameLayout" type="id" />
+
 </resources>
