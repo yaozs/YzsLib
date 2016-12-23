@@ -3,7 +3,8 @@
 ![image](https://github.com/yaozs/YzsLib/blob/master/app/src/main/res/mipmap-xxxhdpi/icon.png)
     
         远程依赖方法在项目根目录下的build.gradle添加如下
-        allprojects {
+        （暂时先别使用该方法依赖项目，项目现在变动很大，每隔几天就会上传修改一些东西，等项目稳定后重新开启远程依赖）
+        allprojects {
         		repositories {
         			...
         			<!--添加的话，就这一句-->
@@ -14,7 +15,8 @@
 
         在引用项目处添加
         dependencies {
-        	        compile 'com.github.a243981326:YzsLib:0.0.2'
+        （暂时先别使用该方法依赖项目，项目现在变动很大，每隔几天就会上传修改一些东西，等项目稳定后重新开启远程依赖）
+        	       //compile 'com.github.a243981326:YzsLib:0.0.2'
         	}
         
         
