@@ -18,6 +18,8 @@ import com.yzs.yzslibrary.entity.TabEntity;
 
 import java.util.ArrayList;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+
 /**
  * Author: 姚智胜
  * Version: V1.0版本
@@ -65,11 +67,6 @@ public abstract class YzsBaseHomeActivity extends YzsBaseActivity {
 
 
     @Override
-    protected void initContentView(Bundle bundle) {
-
-    }
-
-    @Override
     protected void initView() {
         mTabLayout = (CommonTabLayout) findViewById(R.id.base_tabLayout);
         mViewPager = (ViewPager) findViewById(R.id.base_tabLayout_viewPager);
@@ -79,8 +76,7 @@ public abstract class YzsBaseHomeActivity extends YzsBaseActivity {
         if (null == mFragments || mFragments.length == 0) {
             throw new RuntimeException("mFragments is null!");
         }
-
-        initFragments();
+//        initFragments();
         initTabEntities();
         if (null == mTabLayout) {
             throw new RuntimeException("CommonTabLayout is null!");
@@ -90,17 +86,14 @@ public abstract class YzsBaseHomeActivity extends YzsBaseActivity {
             mTabLayout.setTextsize(0);
         }
 
-        if (null == mFrameLayout && mViewPager == null) {
-            throw new RuntimeException("Container is null!");
-
-        } else if (null != mViewPager) {
+        if (null != mViewPager) {
+            Logger.e("Choose_ViewPager");
             initViewpagerAdapter();
-
         } else {
-            mTabLayout.setTabData(mTabEntities);
-            setTabSelect();
+            initFragments();
+            Logger.e("Choose_frameLayout");
         }
-
+        setTabSelect();
     }
 
     private void initTabEntities() {
@@ -111,6 +104,7 @@ public abstract class YzsBaseHomeActivity extends YzsBaseActivity {
         for (int i = 0; i < mFragments.length; i++) {
             mTabEntities.add(new TabEntity(mTitles == null ? "" : mTitles[i], mIconSelectIds[i], mIconUnSelectIds[i]));
         }
+        mTabLayout.setTabData(mTabEntities);
     }
 
     /**
@@ -120,10 +114,11 @@ public abstract class YzsBaseHomeActivity extends YzsBaseActivity {
         //加载mFragments
         if (getBundle() == null) {
             //加载mFragments
-            loadMultipleRootFragment(R.id.base_tabLayout_frameLayout, 0, mFragments);
+            loadMultipleRootFragment(R.id.base_tabLayout_frameLayout, 1, mFragments);
         } else {
             // 这里库已经做了Fragment恢复,所有不需要额外的处理了, 不会出现重叠问题
             for (int i = 0; i < mFragments.length; i++) {
+                Logger.e("initFragments" + i);
                 mFragments[i] = findFragment(mFragments[i].getClass());
             }
         }
@@ -156,20 +151,25 @@ public abstract class YzsBaseHomeActivity extends YzsBaseActivity {
      * 为mTabLayout
      */
     private void setTabSelect() {
+        Logger.e("setTabSelect");
         mTabLayout.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelect(int position) {
-                int toDoHidden = -1;
-                for (int i = 0; i < mFragments.length; i++) {
-                    if (!mFragments[i].isHidden()) {
-                        toDoHidden = i;
-                        Logger.e("查找显示中的fragment-------" + toDoHidden);
+                if (null != mViewPager) {
+                    mViewPager.setCurrentItem(position);
+                } else {
+                    int toDoHidden = -1;
+                    for (int i = 0; i < mFragments.length; i++) {
+                        if (!mFragments[i].isHidden()) {
+                            toDoHidden = i;
+                            Logger.e("查找显示中的fragment-------" + toDoHidden);
+                        }
                     }
-                }
-                Logger.e("选中的fragment-------" + position);
-                Logger.e("确定显示中的fragment-------" + toDoHidden);
+                    Logger.e("选中的fragment-------" + position);
+                    Logger.e("确定显示中的fragment-------" + toDoHidden);
 
-                showHideFragment(mFragments[position], mFragments[toDoHidden]);
+                    showHideFragment(mFragments[position], mFragments[toDoHidden]);
+                }
             }
 
             @Override

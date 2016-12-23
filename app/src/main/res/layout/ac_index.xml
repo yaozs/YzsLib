@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<android.support.v4.view.ViewPager-->
-    <!--android:id="@+id/vp_ac_index"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="84dp" />-->
-    <FrameLayout
-        android:id="@id/base_tabLayout_frameLayout"
+    <android.support.v4.view.ViewPager
+        android:id="@id/base_tabLayout_viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/design_bottom_navigation_height" />
+
+    <!--<FrameLayout-->
+        <!--android:id="@id/base_tabLayout_frameLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginBottom="@dimen/design_bottom_navigation_height" />-->
 
 
     <com.flyco.tablayout.CommonTabLayout
