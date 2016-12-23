@@ -1,6 +1,7 @@
 package com.yzs.yzslibrarydemo.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.yzs.yzslibrary.base.activity.YzsBaseHomeActivity;
 import com.yzs.yzslibrary.base.fragment.YzsBaseFragment;
@@ -11,6 +12,8 @@ import com.yzs.yzslibrarydemo.fragment.HomeFragment;
 import com.yzs.yzslibrarydemo.fragment.MoreFragment;
 import com.yzs.yzslibrarydemo.fragment.MsgFragment;
 import com.yzs.yzslibrarydemo.fragment.PersonFragment;
+
+import static android.nfc.tech.MifareUltralight.PAGE_SIZE;
 
 /**
  * Author: 姚智胜
@@ -37,7 +40,7 @@ public class IndexActivity extends YzsBaseHomeActivity {
 
     @Override
     protected void initTab() {
-        setmFragments( new YzsBaseFragment[]{new HomeFragment(),new MsgFragment(),new PersonFragment(),new MoreFragment()});
+        setmFragments(new YzsBaseFragment[]{new HomeFragment(), new MsgFragment(), new PersonFragment(), new MoreFragment()});
         setmIconSelectIds(mIconSelectIds);
         setmIconUnSelectIds(mIconUnselectIds);
     }
@@ -45,7 +48,15 @@ public class IndexActivity extends YzsBaseHomeActivity {
 
     @Override
     protected void initLogic() {
+        //一句话调用loading
         showLoadingDialog(LoadingDialog.YZS_LOADING, R.mipmap.icon);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //取消loading
+                cancelLoadingDialog();
+            }
+        }, 3000);
 
     }
 
