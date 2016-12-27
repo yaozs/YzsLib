@@ -1,5 +1,6 @@
 package com.yzs.yzslibrary.base.activity;
 
+import android.support.annotation.LayoutRes;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -75,7 +76,7 @@ public abstract class YzsBaseListActivity<T> extends YzsBaseActivity {
      *
      * @param layoutResId 子布局layout
      */
-    public void setLayoutResId(int layoutResId) {
+    public void setLayoutResId(@LayoutRes int layoutResId) {
         this.layoutResId = layoutResId;
     }
 
