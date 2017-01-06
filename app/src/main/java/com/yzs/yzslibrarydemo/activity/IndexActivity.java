@@ -67,7 +67,7 @@ public class IndexActivity extends YzsBaseHomeActivity {
 
     @Override
     protected void onEventComing(EventCenter center) {
-
+        String aa = (String) center.getData();
     }
 
 
