@@ -36,7 +36,7 @@ dependencies {
     //强大的log工具
     compile 'com.orhanobut:logger:1.15'
     // 为"单Activity ＋ 多Fragment","多模块Activity + 多Fragment"架构而生,替代官方fragment
-    compile 'me.yokeyword:fragmentation:0.8.5'
+    compile 'me.yokeyword:fragmentation:0.10.0'
     compile('com.github.yaozs:AndroidImageSlider-glide:1.0.1') {
         exclude group: 'com.github.bumptech.glide'
     }
