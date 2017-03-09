@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
-import com.yzs.yzslibrary.base.fragment.YzsBaseFragment;
-import com.yzs.yzslibrary.entity.EventCenter;
+import com.yzs.yzsbaseactivitylib.entity.EventCenter;
+import com.yzs.yzsbaseactivitylib.fragment.YzsBaseFragment;
 import com.yzs.yzslibrary.view.AdaptiveWebView;
 import com.yzs.yzslibrary.view.NoticeView;
 import com.yzs.yzslibrary.view.nicespinner.NiceSpinner;
@@ -39,7 +39,7 @@ public class MyDemoFragment extends YzsBaseFragment {
 
     @Override
     protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = createFragmentView(inflater, container, R.layout.ac_first_view);
+        View view = inflater.inflate(R.layout.ac_first_view, container, false);
         return view;
     }
 
@@ -52,8 +52,9 @@ public class MyDemoFragment extends YzsBaseFragment {
 //        webView.loadUrl("http://www.zhihu.com/question/20718551");
     }
 
+
     @Override
-    protected void initLogic(View view) {
+    protected void initLogic() {
         showLoadingDialog();
         final ArrayList<String> strs = new ArrayList<>();
         strs.add("哎呦，不错哦");
@@ -120,9 +121,11 @@ public class MyDemoFragment extends YzsBaseFragment {
     }
 
     @Override
-    protected void onEventComing(EventCenter center) {
+    protected void onEventComing(EventCenter eventCenter) {
 
     }
+
+
 
 
     @Override

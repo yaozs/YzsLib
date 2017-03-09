@@ -2,8 +2,8 @@ package com.yzs.yzslibrarydemo.activity;
 
 import android.os.Bundle;
 
-import com.yzs.yzslibrary.base.activity.YzsBaseActivity;
-import com.yzs.yzslibrary.entity.EventCenter;
+import com.yzs.yzsbaseactivitylib.activity.YzsBaseActivity;
+import com.yzs.yzsbaseactivitylib.entity.EventCenter;
 import com.yzs.yzslibrarydemo.R;
 
 /**

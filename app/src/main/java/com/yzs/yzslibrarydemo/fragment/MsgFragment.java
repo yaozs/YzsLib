@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.yzs.yzslibrary.base.fragment.YzsBaseFragment;
-import com.yzs.yzslibrary.entity.EventCenter;
+import com.yzs.yzsbaseactivitylib.entity.EventCenter;
+import com.yzs.yzsbaseactivitylib.fragment.YzsBaseFragment;
 import com.yzs.yzslibrarydemo.R;
 
 /**
@@ -22,19 +22,20 @@ public class MsgFragment extends YzsBaseFragment {
 
     @Override
     protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View    view = inflater.inflate(R.layout.fg_msg, container, false);
+        View view = inflater.inflate(R.layout.fg_msg, container, false);
         return view;
     }
 
     @Override
-    protected void initView( View    view) {
+    protected void initView(View view) {
 
     }
 
     @Override
-    protected void initLogic( View    view) {
+    protected void initLogic() {
 
     }
+
 
     @Override
     protected void getBundleExtras(Bundle bundle) {

@@ -6,8 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.yzs.yzslibrary.base.fragment.YzsBaseFragment;
-import com.yzs.yzslibrary.entity.EventCenter;
+import com.yzs.yzsbaseactivitylib.fragment.YzsBaseFragment;
 import com.yzs.yzslibrarydemo.R;
 
 /**
@@ -31,9 +30,10 @@ public class MoreFragment extends YzsBaseFragment {
     }
 
     @Override
-    protected void initLogic(View view) {
+    protected void initLogic() {
 
     }
+
 
     @Override
     protected void getBundleExtras(Bundle bundle) {
@@ -41,7 +41,9 @@ public class MoreFragment extends YzsBaseFragment {
     }
 
     @Override
-    protected void onEventComing(EventCenter center) {
+    protected void onEventComing(com.yzs.yzsbaseactivitylib.entity.EventCenter eventCenter) {
 
     }
+
+
 }

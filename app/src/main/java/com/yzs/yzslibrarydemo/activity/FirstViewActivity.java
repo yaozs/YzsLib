@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 
-import com.yzs.yzslibrary.base.activity.YzsBaseActivity;
-import com.yzs.yzslibrary.entity.EventCenter;
+import com.yzs.yzsbaseactivitylib.activity.YzsBaseActivity;
+import com.yzs.yzsbaseactivitylib.entity.EventCenter;
 import com.yzs.yzslibrary.view.NoticeView;
 import com.yzs.yzslibrary.view.nicespinner.NiceSpinner;
 import com.yzs.yzslibrary.view.togglebutton.ToggleButton;

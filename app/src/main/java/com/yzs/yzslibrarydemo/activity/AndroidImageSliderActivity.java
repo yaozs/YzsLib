@@ -1,7 +1,6 @@
 package com.yzs.yzslibrarydemo.activity;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
@@ -10,8 +9,8 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.orhanobut.logger.Logger;
-import com.yzs.yzslibrary.base.activity.YzsBaseActivity;
-import com.yzs.yzslibrary.entity.EventCenter;
+import com.yzs.yzsbaseactivitylib.activity.YzsBaseActivity;
+import com.yzs.yzsbaseactivitylib.entity.EventCenter;
 import com.yzs.yzslibrarydemo.R;
 
 /**

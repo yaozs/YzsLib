@@ -5,7 +5,6 @@ import com.squareup.leakcanary.LeakCanary;
 import com.yzs.yzslibrary.app.BaseApp;
 import com.yzs.yzslibrary.util.ToastUtils;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 /**
  * Author: 姚智胜

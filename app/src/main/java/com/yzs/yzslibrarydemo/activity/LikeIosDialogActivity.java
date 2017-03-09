@@ -5,8 +5,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.yzs.yzslibrary.base.activity.YzsBaseActivity;
-import com.yzs.yzslibrary.entity.EventCenter;
+import com.yzs.yzsbaseactivitylib.activity.YzsBaseActivity;
+import com.yzs.yzsbaseactivitylib.entity.EventCenter;
 import com.yzs.yzslibrary.view.ActionSheetDialog;
 import com.yzs.yzslibrary.view.IosAlertDialog;
 import com.yzs.yzslibrarydemo.R;

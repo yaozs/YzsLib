@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
     style="@style/activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <!--  在继承Y轴是BaseHomeActivity是必须声明的id -base_tabLayout
     二选一声明base_tabLayout_viewPager或base_tabLayout_frameLayout-->
     <android.support.v4.view.ViewPager
-        android:id="@id/base_tabLayout_viewPager"
+        android:id="@id/yzs_base_tabLayout_viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/design_bottom_navigation_height" />
+        android:layout_marginBottom="56dp" />
 
     <!--<FrameLayout-->
-    <!--android:id="@id/base_tabLayout_frameLayout"-->
+    <!--android:id="@id/yzs_base_tabLayout_frameLayout"-->
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="match_parent"-->
-    <!--android:layout_marginBottom="@dimen/design_bottom_navigation_height" />-->
+    <!--android:layout_marginBottom="56dp" />-->
 
 
     <com.flyco.tablayout.CommonTabLayout
-        android:id="@id/base_tabLayout"
+        android:id="@id/yzs_base_tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/design_bottom_navigation_height"
+        android:layout_height="56dp"
         android:layout_gravity="bottom"
-        android:background="@color/md_white_1000" />
+        android:background="@color/md_white_1000"
+        tl:tl_indicator_color="#2C97DE"
+        tl:tl_indicator_gravity="TOP"
+        tl:tl_textSelectColor="#2C97DE"
+        tl:tl_textUnselectColor="#66000000" />
+
+    <!--CommonTabLayout所有属性展示-->
+    <!--<com.flyco.tablayout.CommonTabLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:background="#ffffff"-->
+    <!--tl:tl_iconGravity="LEFT"-->
+    <!--tl:tl_iconHeight="45dp"-->
+    <!--tl:tl_iconMargin="5dp"-->
+    <!--tl:tl_iconWidth="25dp"-->
+    <!--tl:tl_indicator_bounce_enable="false"-->
+    <!--tl:tl_indicator_color="#2C97DE"-->
+    <!--tl:tl_indicator_gravity="TOP"-->
+    <!--tl:tl_textSelectColor="#2C97DE"-->
+    <!--tl:tl_textUnselectColor="#66000000"-->
+    <!--tl:tl_textsize="0sp"-->
+    <!--tl:tl_underline_color="#DDDDDD"-->
+    <!--tl:tl_underline_gravity="TOP"-->
+    <!--tl:tl_underline_height="1dp"/>-->
 
 </FrameLayout>
