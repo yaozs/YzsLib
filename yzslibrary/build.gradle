@@ -38,7 +38,7 @@ dependencies {
         exclude group: 'com.github.bumptech.glide'
     }
     //BaseActivity框架
-    compile 'com.github.yaozs:YzsBaseActivity:0.3.1'
+    compile 'com.github.yaozs:YzsBaseActivity:0.3.2'
     //内存检测
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'

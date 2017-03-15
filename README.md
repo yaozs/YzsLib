@@ -14,11 +14,11 @@
 
         在引用项目处添加
         dependencies {
-                compile 'com.github.yaozs:YzsLib:0.1.0'  
+                compile 'com.github.yaozs:YzsLib:0.1.1'  
         	}
         
         
-        目前最新版本为0.1.0，就是最新的release版本，之后引用修改版本号就可以
+        目前最新版本为0.1.1，就是最新的release版本，之后引用修改版本号就可以
         YzsLib开源交流群：331973212
         
         一个共享的快速开发框架，本人会逐渐完善，让他越来越完美
@@ -45,6 +45,7 @@
         * 16.12.21 新增YzsLoadingDialog,可自定义图片的loading动画
         * 16.12.22 新增YzsBaseHomeActivity(首页base父类)
         * 17.03.09 彻底删除所有关于baseactivity的包，使其依赖于YzsBaseActivity项目，优化代码
+        * 17.03.15 更新YzsBaseActivity最新依赖
 
 ![image](https://github.com/yaozs/YzsLib/blob/master/app/src/main/res/mipmap-xxxhdpi/icon.png)
 
