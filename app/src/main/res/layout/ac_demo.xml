@@ -9,7 +9,7 @@
     <include layout="@layout/item_title" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/base_list"
+        android:id="@id/yzs_base_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/item_demo" />
