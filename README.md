@@ -46,6 +46,7 @@
         * 16.12.22 新增YzsBaseHomeActivity(首页base父类)
         * 17.03.09 彻底删除所有关于baseactivity的包，使其依赖于YzsBaseActivity项目，优化代码
         * 17.03.15 更新YzsBaseActivity最新依赖
+        * 17.03.16 删除AndroidImageSlider广告轮播控件，添加使用banner框架支持
 
 ![image](https://github.com/yaozs/YzsLib/blob/master/app/src/main/res/mipmap-xxxhdpi/icon.png)
 

@@ -33,10 +33,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:24.2.1'
     //强大的log工具
     compile 'com.orhanobut:logger:1.15'
-
-    compile('com.github.yaozs:AndroidImageSlider-glide:1.0.1') {
-        exclude group: 'com.github.bumptech.glide'
-    }
+    //个人认为现在比较优秀的广告条控件
+    compile 'com.youth.banner:banner:1.4.9'
     //BaseActivity框架
     compile 'com.github.yaozs:YzsBaseActivity:0.3.2'
     //内存检测
