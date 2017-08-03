@@ -1,3 +1,8 @@
+![Android百科全书二维码.jpg](http://upload-images.jianshu.io/upload_images/5637205-5afd370499eee2d3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+##本人最新公众号《Android百科全书》，汇集了各个公众号的优秀文章，进行分类整理，让大家能够更方便的查阅，希望大家多多支持，来个关注奥。
+
+
 # YzsLib
 
 ![image](https://github.com/yaozs/YzsLib/blob/master/app/src/main/res/mipmap-xxxhdpi/icon.png)
