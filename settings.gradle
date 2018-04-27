@@ -1,1 +1,1 @@
-include ':app', ':yzslibrary'
+include ':app', ':yzslibrary', ':wanandroidapp'

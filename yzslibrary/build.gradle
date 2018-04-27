@@ -4,12 +4,12 @@ apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.yaozs'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -25,20 +25,20 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     //基于Glide的transformation库，拥有裁剪，着色，模糊，滤镜等多种转换效果
-    compile 'jp.wasabeef:glide-transformations:2.0.1'
-    compile 'com.android.support:recyclerview-v7:24.2.1'
+//    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
     //强大的log工具
     compile 'com.orhanobut:logger:1.15'
     //个人认为现在比较优秀的广告条控件
-    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.youth.banner:banner:1.4.10'
     //BaseActivity框架
-    compile 'com.github.yaozs:YzsBaseActivity:0.3.2'
-    //内存检测
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    compile 'com.github.yaozs:YzsBaseActivity:0.5.2'
+//    //内存检测
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
 }

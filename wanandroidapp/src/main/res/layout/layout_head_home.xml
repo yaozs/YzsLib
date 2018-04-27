@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner_home"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:delay_time="3500"
+        app:scroll_time="1000" />
+    <!--delay_time	integer	轮播间隔时间，默认2000-->
+    <!--scroll_time	integer	轮播滑动执行时间，默认800-->
+    <!--is_auto_play	boolean	是否自动轮播，默认true-->
+    <!--title_background	color	reference-->
+    <!--title_textcolor	color	标题字体颜色-->
+    <!--title_textsize	dimension	标题字体大小-->
+    <!--title_height	dimension	标题栏高度-->
+    <!--indicator_width	dimension	指示器圆形按钮的宽度-->
+    <!--indicator_height	dimension	指示器圆形按钮的高度-->
+    <!--indicator_margin	dimension	指示器之间的间距-->
+    <!--indicator_drawable_selected	reference	指示器选中效果-->
+    <!--indicator_drawable_unselected	reference	指示器未选中效果-->
+    <!--image_scale_type	enum	和imageview的ScaleType作用一样-->
+</LinearLayout>

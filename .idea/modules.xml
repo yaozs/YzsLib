@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/YzsLib.iml" filepath="$PROJECT_DIR$/YzsLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wanandroidapp/wanandroidapp.iml" filepath="$PROJECT_DIR$/wanandroidapp/wanandroidapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/yzslibrary/yzslibrary.iml" filepath="$PROJECT_DIR$/yzslibrary/yzslibrary.iml" />
     </modules>
   </component>
