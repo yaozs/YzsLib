@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Author: 姚智胜
  * Version: V1.0版本
- * Description:
+ * Description: 首页banner数据类
  * Date: 2018/4/25
  */
 public class BannerBean {

@@ -28,11 +28,14 @@ public interface HomeContract {
         Observable<HomeBean> requestHomeListData(int page);
 
         Observable<BannerBean> requestBannerData();
+
+        Observable<Object> refresh();
     }
 
     abstract static class CHomePresenter extends BasePresenter<CHomeView, CHomeModel> {
+
         public abstract void getDataRequest(int page);
 
-        public abstract void getBannerDataRequest();
+        public abstract void refresh();
     }
 }

@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.google.gson.Gson;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 import com.youth.banner.Banner;
@@ -16,16 +16,12 @@ import com.yzs.wanandroidapp.R;
 import com.yzs.wanandroidapp.bean.BannerBean;
 import com.yzs.wanandroidapp.bean.HomeBean;
 import com.yzs.wanandroidapp.contract.HomeContract;
-import com.yzs.wanandroidapp.http.Api;
 import com.yzs.wanandroidapp.model.HomeModel;
 import com.yzs.wanandroidapp.presenter.HomePresenter;
 import com.yzs.wanandroidapp.utils.GlideImageLoader;
 import com.yzs.yzsbaseactivitylib.entity.BaseListType;
 import com.yzs.yzsbaseactivitylib.util.LoadingDialogUtils;
-import com.yzs.yzsbaseactivitylib.yzsbase.YzsBaseListFragment;
 import com.yzs.yzsbaseactivitylib.yzsbase.YzsBaseMvpListFragment;
-import com.yzs.yzslibrary.util.ConstUtils;
-import com.yzs.yzslibrary.util.LogUtils;
 import com.yzs.yzslibrary.util.TimeUtils;
 import com.yzs.yzslibrary.util.ToastUtils;
 
@@ -33,11 +29,6 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Locale;
 
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 
 /**
  * Author: 姚智胜
@@ -112,6 +103,12 @@ public class HomeFragment extends YzsBaseMvpListFragment<HomePresenter, HomeMode
         View headView = LayoutInflater.from(_mActivity).inflate(R.layout.layout_head_home, null);
         banner = (Banner) headView.findViewById(R.id.banner_home);
         mAdapter.addHeaderView(headView);
+        mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
+
+            }
+        });
         autoRefresh();
     }
 
@@ -123,7 +120,7 @@ public class HomeFragment extends YzsBaseMvpListFragment<HomePresenter, HomeMode
     /**
      * 详细使用
      */
-    private void bannerUse(List<BannerBean.DataBean> bannerList) {
+    private void initBanner(List<BannerBean.DataBean> bannerList) {
         //设置banner样式
         banner.setBannerStyle(BannerConfig.NUM_INDICATOR);
         //设置图片加载器
@@ -174,14 +171,13 @@ public class HomeFragment extends YzsBaseMvpListFragment<HomePresenter, HomeMode
 
     @Override
     public void showBanner(List<BannerBean.DataBean> bannerList) {
-        bannerUse(bannerList);
+        initBanner(bannerList);
     }
 
     @Override
     protected void refreshListener() {
         setPage(0);
-        mPresenter.getBannerDataRequest();
-        mPresenter.getDataRequest(getPage());
+        mPresenter.refresh();
     }
 
     @Override

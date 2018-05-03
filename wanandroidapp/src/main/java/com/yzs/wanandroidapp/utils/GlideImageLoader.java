@@ -26,9 +26,6 @@ public class GlideImageLoader extends ImageLoader {
          切记不要胡乱强转！
          */
         BannerBean.DataBean bean = (BannerBean.DataBean) path;
-        LogUtils.e(new Gson().toJson(bean));
-        LogUtils.e("================="+new Gson().toJson(path));
-        LogUtils.e("=======111111=========="+bean.getImagePath());
         //Glide 加载图片简单用法
         Glide.with(context).load(bean.getImagePath()).into(imageView);
 

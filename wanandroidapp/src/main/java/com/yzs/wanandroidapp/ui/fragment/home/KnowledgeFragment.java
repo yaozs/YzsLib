@@ -5,6 +5,8 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.yzs.wanandroidapp.R;
+import com.yzs.wanandroidapp.bean.HomeKnowledgeBean;
+import com.yzs.yzsbaseactivitylib.entity.BaseListType;
 import com.yzs.yzsbaseactivitylib.yzsbase.YzsBaseFragment;
 import com.yzs.yzsbaseactivitylib.yzsbase.YzsBaseListFragment;
 
@@ -14,7 +16,7 @@ import com.yzs.yzsbaseactivitylib.yzsbase.YzsBaseListFragment;
  * Description: 知识体系fragment
  * Date: 2018/4/20
  */
-public class KnowledgeFragment extends YzsBaseListFragment{
+public class KnowledgeFragment extends YzsBaseListFragment<HomeKnowledgeBean.DataBean> {
 
     public static KnowledgeFragment newInstance() {
 
@@ -26,18 +28,21 @@ public class KnowledgeFragment extends YzsBaseListFragment{
 
     @Override
     protected int initItemLayout() {
-        return R.layout.item_home_layout;
+        return R.layout.item_layout_knowledge;
     }
 
     @Override
     protected void initSetting() {
-
+        isOpenLoad(false, false);
+        setListType(BaseListType.LINEAR_LAYOUT_MANAGER, true);//设置展示方式
     }
 
     @Override
-    protected void MyHolder(BaseViewHolder baseViewHolder, Object o) {
+    protected void MyHolder(BaseViewHolder baseViewHolder, HomeKnowledgeBean.DataBean bean) {
+        baseViewHolder.setText(R.id.tv_knowledge_title, bean.getName());
 
     }
+
 
     @Override
     protected void initLogic() {
